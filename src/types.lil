@@ -1,0 +1,44 @@
+export extern class ToHtmlOptions {
+  JsValue allowDangerousHtml;
+  JsValue closeSelfClosing;
+}
+
+export class HtmlState {
+  bool allowDangerousHtml;
+  bool closeSelfClosing;
+
+  init(bool allowDangerousHtml, bool closeSelfClosing) {
+    this.allowDangerousHtml = allowDangerousHtml;
+    this.closeSelfClosing = closeSelfClosing;
+  }
+}
+
+export bool optionFlag(JsValue value, bool fallback) {
+  if (JS.isUndefined(value) || JS.isNullish(value)) {
+    return fallback;
+  }
+  return value.truthy();
+}
+
+export HtmlState readHtmlState(JsValue opt) {
+  if (JS.isUndefined(opt) || JS.isNullish(opt)) {
+    return new HtmlState(false, false);
+  }
+  ToHtmlOptions incoming = JS.assume(opt);
+  return new HtmlState(
+    optionFlag(incoming.allowDangerousHtml, false),
+    optionFlag(incoming.closeSelfClosing, false)
+  );
+}
+
+export string stringField(JsValue node, string key) {
+  JsValue value = node[key];
+  if (value is string) {
+    return value;
+  }
+  return "";
+}
+
+export bool isVoidTag(string tag) {
+  return tag == "area" || tag == "base" || tag == "br" || tag == "col" || tag == "embed" || tag == "hr" || tag == "img" || tag == "input" || tag == "link" || tag == "meta" || tag == "param" || tag == "source" || tag == "track" || tag == "wbr";
+}

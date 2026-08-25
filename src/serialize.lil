@@ -1,0 +1,142 @@
+import { HtmlState, isVoidTag, readHtmlState, stringField } from "./types.lil";
+
+string escapeHtml(string value) {
+  string out = "";
+  int n = value.length;
+  int i = 0;
+  while (i < n) {
+    string ch = value.charAt(i);
+    if (ch == "&") {
+      out = out + "&amp;";
+    } else if (ch == "<") {
+      out = out + "&lt;";
+    } else if (ch == ">") {
+      out = out + "&gt;";
+    } else if (ch == "\"") {
+      out = out + "&quot;";
+    } else {
+      out = out + ch;
+    }
+    i = i + 1;
+  }
+  return out;
+}
+
+string classNameValue(JsValue classes) {
+  if (classes is string) {
+    return classes;
+  }
+  if (!JS.isArray(classes)) {
+    return "";
+  }
+  string out = "";
+  int n = JS.number(classes["length"]).toInt();
+  int i = 0;
+  while (i < n) {
+    JsValue item = classes[i];
+    if (item is string) {
+      string part = item;
+      if (part.length > 0) {
+        if (out.length > 0) {
+          out = out + " ";
+        }
+        out = out + part;
+      }
+    }
+    i = i + 1;
+  }
+  return out;
+}
+
+string serializeProps(JsValue props) {
+  if (JS.isUndefined(props) || JS.isNullish(props)) {
+    return "";
+  }
+  string out = "";
+  for (string key in props) {
+    if (key == "className") {
+      string classValue = classNameValue(props[key]);
+      if (classValue.length > 0) {
+        out = out + " class=\"" + escapeHtml(classValue) + "\"";
+      }
+    } else {
+      JsValue value = props[key];
+      if (JS.isUndefined(value) || JS.isNullish(value)) {
+      } else if (value is bool) {
+        bool flag = value;
+        if (flag) {
+          out = out + " " + key;
+        }
+      } else if (value is string) {
+        out = out + " " + key + "=\"" + escapeHtml(value) + "\"";
+      } else if (value is float) {
+        out = out + " " + key + "=\"" + escapeHtml(JS.string(value)) + "\"";
+      } else {
+        out = out + " " + key + "=\"" + escapeHtml(JS.string(value)) + "\"";
+      }
+    }
+  }
+  return out;
+}
+
+string serializeAll(JsValue nodes, HtmlState state) {
+  if (!JS.isArray(nodes)) {
+    return "";
+  }
+  string out = "";
+  int n = JS.number(nodes["length"]).toInt();
+  int i = 0;
+  while (i < n) {
+    out = out + serializeNode(nodes[i], state);
+    i = i + 1;
+  }
+  return out;
+}
+
+string serializeNode(JsValue node, HtmlState state) {
+  if (JS.isUndefined(node) || JS.isNullish(node)) {
+    return "";
+  }
+  if (JS.isArray(node)) {
+    return serializeAll(node, state);
+  }
+  JsValue typeVal = node["type"];
+  if (!(typeVal is string)) {
+    return "";
+  }
+  string type = typeVal;
+  if (type == "root") {
+    return serializeAll(node["children"], state);
+  }
+  if (type == "text") {
+    return escapeHtml(stringField(node, "value"));
+  }
+  if (type == "comment") {
+    return "<!--" + stringField(node, "value") + "-->";
+  }
+  if (type == "raw") {
+    if (state.allowDangerousHtml) {
+      return stringField(node, "value");
+    }
+    return "";
+  }
+  if (type == "element") {
+    string tag = stringField(node, "tagName");
+    if (tag.length == 0) {
+      return serializeAll(node["children"], state);
+    }
+    string attrs = serializeProps(node["properties"]);
+    if (isVoidTag(tag)) {
+      if (state.closeSelfClosing) {
+        return "<" + tag + attrs + " />";
+      }
+      return "<" + tag + attrs + ">";
+    }
+    return "<" + tag + attrs + ">" + serializeAll(node["children"], state) + "</" + tag + ">";
+  }
+  return serializeAll(node["children"], state);
+}
+
+export string serializeTree(JsValue tree, JsValue opt) {
+  return serializeNode(tree, readHtmlState(opt));
+}
