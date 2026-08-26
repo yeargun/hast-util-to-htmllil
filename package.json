@@ -1,6 +1,6 @@
 {
   "name": "@itslil/hast-util-to-html",
-  "version": "9.0.5",
+  "version": "9.0.6",
   "description": "hast-util-to-html reimplemented in LilScript",
   "keywords": [
     "hast",
@@ -56,12 +56,13 @@
   "scripts": {
     "build": "node scripts/build.mjs --compile",
     "build:site": "node scripts/build-site.mjs",
-    "test": "node --test test/*.test.mjs",
+    "test": "node --test test/*.test.mjs test/official/index.js",
     "check:site": "npm run build:site && node --test test/site.test.mjs",
     "check:pack": "node scripts/check-pack.mjs",
     "prepublishOnly": "npm test && npm run check:pack && npm run check:site"
   },
   "devDependencies": {
-    "esbuild": "0.28.1"
+    "esbuild": "0.28.1",
+    "hastscript": "^9.0.1"
   }
 }

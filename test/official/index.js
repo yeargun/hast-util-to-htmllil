@@ -1,0 +1,15 @@
+/* eslint-disable import/no-unassigned-import */
+import './attribute.js'
+import './comment.js'
+import './core.js'
+import './doctype.js'
+import './element.js'
+import './omission.js'
+import './omission-opening.js'
+import './omission-closing.js'
+import './raw.js'
+import './security.js'
+import './svg.js'
+import './root.js'
+import './text.js'
+/* eslint-enable import/no-unassigned-import */

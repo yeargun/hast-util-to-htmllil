@@ -1,6 +1,6 @@
 # @itslil/hast-util-to-html
 
-hast-util-to-html reimplemented in LilScript. This is **not** the official [`hast-util-to-html`](https://github.com/syntax-tree/hast-util-to-html) package.
+Official [`hast-util-to-html@9.0.5`](https://github.com/syntax-tree/hast-util-to-html) algorithms rewritten in LilScript. Official test suite 389/389. Not affiliated with upstream.
 
 **Site:** [yeargun.github.io/hast-util-to-htmllil/](https://yeargun.github.io/hast-util-to-htmllil/)
 

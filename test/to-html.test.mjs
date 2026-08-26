@@ -16,9 +16,9 @@ const hi = {
 }
 
 describe("@itslil/hast-util-to-html library", () => {
-  it("exports toHtml and default", () => {
+  it("exports toHtml", () => {
     assert.equal(typeof toHtml, "function")
-    assert.equal(library.default, toHtml)
+    assert.deepEqual(Object.keys(library).sort(), ["toHtml"])
   })
 
   it("keeps pinned option and tree keys in the library artifact", () => {
@@ -35,7 +35,7 @@ describe("@itslil/hast-util-to-html library", () => {
   })
 
   it("escapes text and attributes", () => {
-    assert.equal(toHtml({ type: "text", value: "a&b<c>\"d" }), "a&amp;b&lt;c&gt;&quot;d")
+    assert.equal(toHtml({ type: "text", value: "a&b<c>\"d" }), "a&#x26;b&#x3C;c>\"d")
     assert.equal(
       toHtml({
         type: "element",
@@ -43,7 +43,7 @@ describe("@itslil/hast-util-to-html library", () => {
         properties: { href: "x&y", title: "<t>" },
         children: [],
       }),
-      "<a href=\"x&amp;y\" title=\"&lt;t&gt;\"></a>",
+      "<a href=\"x&#x26;y\" title=\"<t>\"></a>",
     )
   })
 
@@ -78,7 +78,7 @@ describe("@itslil/hast-util-to-html library", () => {
 
   it("emits raw only when allowDangerousHtml is set", () => {
     const raw = { type: "raw", value: "<em>x</em>" }
-    assert.equal(toHtml(raw), "")
+    assert.equal(toHtml(raw), "&#x3C;em>x&#x3C;/em>")
     assert.equal(toHtml(raw, { allowDangerousHtml: true }), "<em>x</em>")
   })
 })
