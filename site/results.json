@@ -56,18 +56,18 @@
     {
       "id": "itslil",
       "name": "@itslil/hast-util-to-html · library",
-      "raw": 31452,
-      "gzip9": 10326,
-      "brotli11": 8981,
+      "raw": 28245,
+      "gzip9": 9389,
+      "brotli11": 8211,
       "note": "LilScript js-module, extern_fields true. The npm ESM.",
       "primary": true
     },
     {
       "id": "itslil-closed",
       "name": "@itslil/hast-util-to-html · closed",
-      "raw": 31356,
-      "gzip9": 10260,
-      "brotli11": 8924,
+      "raw": 28149,
+      "gzip9": 9326,
+      "brotli11": 8147,
       "note": "Same source, extern_fields false"
     }
   ],
