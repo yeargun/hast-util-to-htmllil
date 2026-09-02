@@ -1,0 +1,9 @@
+import { text } from "./text.lil";
+import { State, jsString } from "../types.lil";
+
+export string raw(JsValue node, int index, JsValue parent, State state) {
+  if (state.settings.allowDangerousHtml) {
+    return jsString(JS.get(node, "value"));
+  }
+  return text(node, index, parent, state);
+}

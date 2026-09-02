@@ -1,0 +1,133 @@
+import { htmlSchemaBlob, svgSchemaBlob } from "./schema-data.lil";
+import { Space, validDataName } from "./types.lil";
+
+export struct Info {
+  string attribute;
+  string flags;
+}
+
+Map<string, string> htmlSchema = new Map<string, string>();
+Map<string, string> svgSchema = new Map<string, string>();
+bool schemaReady = false;
+
+void addLine(Map<string, string> schema, string line) {
+  int first = line.indexOf("|");
+  int second = line.indexOf("|", first + 1);
+  if (first < 0 || second < 0) {
+    return;
+  }
+  string propertyName = line.slice(0, first);
+  string attributeName = line.slice(first + 1, second);
+  string packed = attributeName + "|" + line.slice(second + 1);
+  schema.set(propertyName.toLowerCase(), packed);
+  schema.set(attributeName.toLowerCase(), packed);
+}
+
+void loadBlob(Map<string, string> schema, string blob) {
+  int start = 0;
+  int index = 0;
+  while (index <= blob.length) {
+    if (index == blob.length || blob.charAt(index) == "\n") {
+      if (index > start) {
+        addLine(schema, blob.slice(start, index));
+      }
+      start = index + 1;
+    }
+    index = index + 1;
+  }
+}
+
+void ensureSchema() {
+  if (!schemaReady) {
+    schemaReady = true;
+    loadBlob(htmlSchema, htmlSchemaBlob);
+    loadBlob(svgSchema, svgSchemaBlob);
+  }
+}
+
+pure string restToKebab(string rest) {
+  string result = "";
+  int index = 0;
+  while (index < rest.length) {
+    int code = rest.charCodeAt(index);
+    string character = rest.charAt(index);
+    if (code >= 65 && code <= 90) {
+      result = result + "-" + character.toLowerCase();
+    } else {
+      result = result + character;
+    }
+    index = index + 1;
+  }
+  return result;
+}
+
+pure bool hasDashLower(string rest) {
+  int index = 0;
+  while (index < rest.length - 1) {
+    int code = rest.charCodeAt(index + 1);
+    if (rest.charAt(index) == "-" && code >= 97 && code <= 122) {
+      return true;
+    }
+    index = index + 1;
+  }
+  return false;
+}
+
+pure string dashToCamelChunk(string rest) {
+  string result = "";
+  int index = 0;
+  while (index < rest.length) {
+    if (index < rest.length - 1 && rest.charAt(index) == "-") {
+      int code = rest.charCodeAt(index + 1);
+      if (code >= 97 && code <= 122) {
+        result = result + rest.charAt(index + 1).toUpperCase();
+        index = index + 2;
+        continue;
+      }
+    }
+    result = result + rest.charAt(index);
+    index = index + 1;
+  }
+  return result;
+}
+
+export Info findInfo(Space space, string value) {
+  ensureSchema();
+  Map<string, string> schema = htmlSchema;
+  if (space == Space.Svg) {
+    schema = svgSchema;
+  }
+  string lowered = value.toLowerCase();
+  string? known = schema.get(lowered);
+  if (known != null) {
+    string packed = known;
+    int split = packed.indexOf("|");
+    return Info{packed.slice(0, split), packed.slice(split + 1)};
+  }
+  string propertyName = value;
+  string attributeName = value;
+  if (lowered.length > 4 && lowered.slice(0, 4) == "data" && validDataName(value)) {
+    if (value.charAt(4) == "-") {
+      string rest = dashToCamelChunk(value.slice(5));
+      if (rest.length > 0) {
+        propertyName = "data" + rest.charAt(0).toUpperCase() + rest.slice(1);
+      } else {
+        propertyName = "data";
+      }
+    } else {
+      string rest = value.slice(4);
+      if (!hasDashLower(rest)) {
+        string dashes = restToKebab(rest);
+        if (dashes.length == 0 || dashes.charAt(0) != "-") {
+          dashes = "-" + dashes;
+        }
+        attributeName = "data" + dashes;
+      }
+    }
+  }
+  return Info{attributeName, ""};
+}
+
+export pure bool flagHas(string flags, string character) {
+  return flags.includes(character);
+}

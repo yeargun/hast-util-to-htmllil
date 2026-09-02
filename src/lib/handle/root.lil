@@ -1,0 +1,6 @@
+import { all } from "../index.lil";
+import { State } from "../types.lil";
+
+export string root(JsValue node, int _index, JsValue _parent, State state) {
+  return all(node, state);
+}

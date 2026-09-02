@@ -1,0 +1,90 @@
+import { handle } from "./handle/index.lil";
+import {
+  Settings,
+  Space,
+  State,
+  ToHtmlOptions,
+  childCount,
+  childrenOf,
+  fail,
+  jsString,
+  optionFlag
+} from "./types.lil";
+
+JsValue characterReferencesOrEmpty(JsValue value) {
+  if (value.truthy()) {
+    return value;
+  }
+  return JS.object();
+}
+
+Settings readSettings(ToHtmlOptions options) {
+  return Settings{
+    optionFlag(options.omitOptionalTags),
+    optionFlag(options.allowParseErrors),
+    optionFlag(options.allowDangerousCharacters),
+    optionFlag(options.quoteSmart),
+    optionFlag(options.preferUnquoted),
+    optionFlag(options.tightAttributes),
+    optionFlag(options.upperDoctype),
+    optionFlag(options.tightDoctype),
+    optionFlag(options.bogusComments),
+    optionFlag(options.tightCommaSeparatedLists),
+    optionFlag(options.tightSelfClosing),
+    optionFlag(options.collapseEmptyAttributes),
+    optionFlag(options.allowDangerousHtml),
+    options.voids,
+    characterReferencesOrEmpty(options.characterReferences),
+    optionFlag(options.closeSelfClosing),
+    optionFlag(options.closeEmptyElements)
+  };
+}
+
+export string all(JsValue parent, State state) {
+  JsValue children = childrenOf(parent);
+  string result = "";
+  int index = 0;
+  int length = childCount(children);
+  while (index < length) {
+    result = result + handle(children[index], index, parent, state);
+    index = index + 1;
+  }
+  return result;
+}
+
+export string toHtml(JsValue tree, JsValue optionsValue = JS.undefined()) {
+  JsValue incoming = optionsValue;
+  if (JS.isUndefined(incoming) || JS.isNullish(incoming) || !incoming.truthy()) {
+    incoming = JS.object();
+  }
+  ToHtmlOptions options = JS.assume(incoming);
+  string quote = "\"";
+  JsValue quoteValue = options.quote;
+  if (!(JS.isUndefined(quoteValue) || JS.isNullish(quoteValue)) && quoteValue.truthy()) {
+    quote = jsString(quoteValue);
+  }
+  if (quote != "\"" && quote != "'") {
+    fail("Invalid quote `" + quote + "`, expected `'` or `\"`");
+  }
+  string alternative = "'";
+  if (quote == "'") {
+    alternative = "\"";
+  }
+  Settings settings = readSettings(options);
+  Space space = Space.Html;
+  JsValue spaceValue = options.space;
+  if (spaceValue is string && spaceValue == "svg") {
+    space = Space.Svg;
+  }
+  State state = State{
+    settings,
+    space,
+    quote,
+    alternative
+  };
+  JsValue root = tree;
+  if (JS.isArray(tree)) {
+    root = JS.object("type", "root", "children", tree);
+  }
+  return handle(root, -1, JS.undefined(), state);
+}

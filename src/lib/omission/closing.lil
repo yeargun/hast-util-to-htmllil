@@ -1,0 +1,103 @@
+import { closingTag } from "./omission.lil";
+import { siblingAfter } from "./util/siblings.lil";
+import { stringField } from "../types.lil";
+
+bool isComment(JsValue node) {
+  return !(JS.isUndefined(node) || JS.isNullish(node)) && stringField(node, "type") == "comment";
+}
+
+bool isElementNamed(JsValue node, string tag) {
+  return !(JS.isUndefined(node) || JS.isNullish(node)) && stringField(node, "type") == "element" && stringField(node, "tagName") == tag;
+}
+
+bool isElementOneOf(JsValue node, string first, string second) {
+  if (JS.isUndefined(node) || JS.isNullish(node) || stringField(node, "type") != "element") {
+    return false;
+  }
+  string tag = stringField(node, "tagName");
+  return tag == first || tag == second;
+}
+
+bool textStartsWhitespace(JsValue node) {
+  if (JS.isUndefined(node) || JS.isNullish(node) || stringField(node, "type") != "text") {
+    return false;
+  }
+  JsValue value = JS.get(node, "value");
+  if (!(value is string) || value.length == 0) {
+    return false;
+  }
+  int code = value.charCodeAt(0);
+  return code == 9 || code == 10 || code == 12 || code == 13 || code == 32;
+}
+
+bool headOrColgroupOrCaption(int index, JsValue parent) {
+  JsValue next = siblingAfter(parent, index, true);
+  return JS.isUndefined(next) || JS.isNullish(next) || (!isComment(next) && !textStartsWhitespace(next));
+}
+
+bool pFollows(JsValue next) {
+  if (JS.isUndefined(next) || JS.isNullish(next) || stringField(next, "type") != "element") {
+    return false;
+  }
+  string tag = stringField(next, "tagName");
+  return tag == "address" || tag == "article" || tag == "aside" || tag == "blockquote" || tag == "details" || tag == "div" || tag == "dl" || tag == "fieldset" || tag == "figcaption" || tag == "figure" || tag == "footer" || tag == "form" || tag == "h1" || tag == "h2" || tag == "h3" || tag == "h4" || tag == "h5" || tag == "h6" || tag == "header" || tag == "hgroup" || tag == "hr" || tag == "main" || tag == "menu" || tag == "nav" || tag == "ol" || tag == "p" || tag == "pre" || tag == "section" || tag == "table" || tag == "ul";
+}
+
+bool confusingParent(JsValue parent) {
+  if (JS.isUndefined(parent) || JS.isNullish(parent) || stringField(parent, "type") != "element") {
+    return false;
+  }
+  string tag = stringField(parent, "tagName");
+  return tag == "a" || tag == "audio" || tag == "del" || tag == "ins" || tag == "map" || tag == "noscript" || tag == "video";
+}
+
+export bool closing(JsValue node, int index, JsValue parent) {
+  string tag = stringField(node, "tagName");
+  if (!closingTag(tag)) {
+    return false;
+  }
+  JsValue next = siblingAfter(parent, index);
+  if (tag == "body" || tag == "html") {
+    return !isComment(next);
+  }
+  if (tag == "caption" || tag == "colgroup" || tag == "head") {
+    return headOrColgroupOrCaption(index, parent);
+  }
+  if (tag == "dd") {
+    return JS.isUndefined(next) || JS.isNullish(next) || isElementOneOf(next, "dt", "dd");
+  }
+  if (tag == "dt") {
+    return isElementOneOf(next, "dt", "dd");
+  }
+  if (tag == "li") {
+    return JS.isUndefined(next) || JS.isNullish(next) || isElementNamed(next, "li");
+  }
+  if (tag == "optgroup") {
+    return JS.isUndefined(next) || JS.isNullish(next) || isElementNamed(next, "optgroup");
+  }
+  if (tag == "option") {
+    return JS.isUndefined(next) || JS.isNullish(next) || isElementOneOf(next, "option", "optgroup");
+  }
+  if (tag == "p") {
+    if (JS.isUndefined(next) || JS.isNullish(next)) {
+      return !confusingParent(parent);
+    }
+    return pFollows(next);
+  }
+  if (tag == "rp" || tag == "rt") {
+    return JS.isUndefined(next) || JS.isNullish(next) || isElementOneOf(next, "rp", "rt");
+  }
+  if (tag == "tbody") {
+    return JS.isUndefined(next) || JS.isNullish(next) || isElementOneOf(next, "tbody", "tfoot");
+  }
+  if (tag == "td" || tag == "th") {
+    return JS.isUndefined(next) || JS.isNullish(next) || isElementOneOf(next, "td", "th");
+  }
+  if (tag == "tfoot") {
+    return JS.isUndefined(next) || JS.isNullish(next);
+  }
+  if (tag == "thead") {
+    return isElementOneOf(next, "tbody", "tfoot");
+  }
+  return JS.isUndefined(next) || JS.isNullish(next) || isElementNamed(next, "tr");
+}

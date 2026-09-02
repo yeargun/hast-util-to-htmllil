@@ -1,0 +1,193 @@
+import { all } from "../index.lil";
+import {
+  doubleSubset,
+  EntitySubset,
+  nameSubset,
+  singleSubset,
+  stringifyEntities,
+  unquotedSubset
+} from "../entities.lil";
+import { Info, findInfo, flagHas } from "../schema.lil";
+import { closing } from "../omission/closing.lil";
+import { opening } from "../omission/opening.lil";
+import {
+  Space,
+  State,
+  childCount,
+  countChar,
+  isJsNumber,
+  isNaNNumber,
+  jsString,
+  stringField,
+  voidsIncludes
+} from "../types.lil";
+
+bool jsBoolean(JsValue value) {
+  if (JS.isUndefined(value) || JS.isNullish(value)) {
+    return false;
+  }
+  if (value is bool) {
+    return value;
+  }
+  if (value is string) {
+    return value.length > 0;
+  }
+  if (isJsNumber(value) && isNaNNumber(value)) {
+    return false;
+  }
+  return value.truthy();
+}
+
+string joinValues(JsValue list, string separator, bool commaSeparated) {
+  string result = "";
+  int length = childCount(list);
+  int index = 0;
+  while (index < length) {
+    if (index > 0) {
+      result = result + separator;
+    }
+    JsValue item = list[index];
+    if (!(JS.isUndefined(item) || JS.isNullish(item))) {
+      result = result + jsString(item);
+    }
+    index = index + 1;
+  }
+  if (commaSeparated && length > 0) {
+    JsValue last = list[length - 1];
+    if (last is string && last.length == 0) {
+      result = result + separator;
+    }
+  }
+  return result.trim();
+}
+
+string serializeAttribute(State state, string key, JsValue value) {
+  bool parseErrors = state.settings.allowParseErrors && state.space == Space.Html;
+  Info info = findInfo(state.space, key);
+  bool booleanAttribute = flagHas(info.flags, "b");
+  bool overloadedBoolean = flagHas(info.flags, "o");
+  bool commaSeparated = flagHas(info.flags, "c");
+  JsValue working = value;
+  if (overloadedBoolean && working is string && (working == info.attribute || working == "")) {
+    working = true;
+  } else if ((booleanAttribute || overloadedBoolean) && (!(working is string) || working == info.attribute || working == "")) {
+    working = jsBoolean(working);
+  }
+  if (JS.isUndefined(working) || JS.isNullish(working) || JS.isFalse(working) || (isJsNumber(working) && isNaNNumber(working))) {
+    return "";
+  }
+  string name = stringifyEntities(
+    info.attribute,
+    nameSubset(parseErrors, state.settings.allowDangerousCharacters),
+    state.settings.characterReferences
+  );
+  if (working is bool && working) {
+    return name;
+  }
+  string valueString = "";
+  if (JS.isArray(working)) {
+    string separator = " ";
+    if (commaSeparated) {
+      separator = ", ";
+      if (state.settings.tightCommaSeparatedLists) {
+        separator = ",";
+      }
+    }
+    valueString = joinValues(working, separator, commaSeparated);
+  } else {
+    valueString = jsString(working);
+  }
+  if (state.settings.collapseEmptyAttributes && valueString.length == 0) {
+    return name;
+  }
+  string quote = state.quote;
+  string result = "";
+  bool unquoted = false;
+  if (state.settings.preferUnquoted) {
+    result = stringifyEntities(
+      valueString,
+      unquotedSubset(parseErrors, state.settings.allowDangerousCharacters),
+      state.settings.characterReferences,
+      true
+    );
+    unquoted = result == valueString;
+  }
+  if (!unquoted) {
+    if (state.settings.quoteSmart && countChar(valueString, quote) > countChar(valueString, state.alternative)) {
+      quote = state.alternative;
+    }
+    EntitySubset subset = doubleSubset(parseErrors, state.settings.allowDangerousCharacters);
+    if (quote == "'") {
+      subset = singleSubset(parseErrors, state.settings.allowDangerousCharacters);
+    }
+    result = quote + stringifyEntities(valueString, subset, state.settings.characterReferences, true) + quote;
+  }
+  if (result.length > 0) {
+    return name + "=" + result;
+  }
+  return name + result;
+}
+
+string serializeAttributes(State state, JsValue properties) {
+  if (JS.isUndefined(properties) || JS.isNullish(properties) || JS.typeOf(properties) != "object") {
+    return "";
+  }
+  string result = "";
+  bool first = true;
+  for (string key in properties) {
+    JsValue value = JS.get(properties, key);
+    if (!(JS.isUndefined(value) || JS.isNullish(value))) {
+      string attribute = serializeAttribute(state, key, value);
+      if (attribute.length > 0) {
+        if (!first && (!state.settings.tightAttributes || (result.charAt(result.length - 1) != "\"" && result.charAt(result.length - 1) != "'"))) {
+          result = result + " ";
+        }
+        result = result + attribute;
+        first = false;
+      }
+    }
+  }
+  return result;
+}
+
+export string element(JsValue node, int index, JsValue parent, State state) {
+  Space schema = state.space;
+  bool omit = schema == Space.Html && state.settings.omitOptionalTags;
+  string tag = stringField(node, "tagName");
+  bool selfClosing = state.settings.closeEmptyElements;
+  if (schema == Space.Html) {
+    selfClosing = voidsIncludes(state.settings.voids, tag.toLowerCase());
+  }
+  if (schema == Space.Html && tag == "svg") {
+    state.space = Space.Svg;
+  }
+  string attributes = serializeAttributes(state, JS.get(node, "properties"));
+  JsValue contentParent = node;
+  if (schema == Space.Html && tag == "template") {
+    contentParent = JS.get(node, "content");
+  }
+  string content = all(contentParent, state);
+  if (content.length > 0) {
+    selfClosing = false;
+  }
+  string result = "";
+  if (attributes.length > 0 || !omit || !opening(node, index, parent)) {
+    result = "<" + tag;
+    if (attributes.length > 0) {
+      result = result + " " + attributes;
+    }
+    if (selfClosing && (schema == Space.Svg || state.settings.closeSelfClosing)) {
+      string last = attributes.charAt(attributes.length - 1);
+      if (!state.settings.tightSelfClosing || last == "/" || (last.length > 0 && last != "\"" && last != "'")) {
+        result = result + " ";
+      }
+      result = result + "/";
+    }
+    result = result + ">";
+  }
+  result = result + content;
+  if (!selfClosing && (!omit || !closing(node, index, parent))) {
+    result = result + "</" + tag + ">";
+  }
+  return result;
+}

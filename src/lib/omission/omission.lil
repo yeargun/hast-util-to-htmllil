@@ -1,0 +1,7 @@
+export pure bool closingTag(string tag) {
+  return tag == "body" || tag == "caption" || tag == "colgroup" || tag == "dd" || tag == "dt" || tag == "head" || tag == "html" || tag == "li" || tag == "optgroup" || tag == "option" || tag == "p" || tag == "rp" || tag == "rt" || tag == "tbody" || tag == "td" || tag == "tfoot" || tag == "th" || tag == "thead" || tag == "tr";
+}
+
+export pure bool openingTag(string tag) {
+  return tag == "body" || tag == "colgroup" || tag == "head" || tag == "html" || tag == "tbody";
+}

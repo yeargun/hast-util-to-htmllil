@@ -1,0 +1,5 @@
+import { toHtml as serialize } from "./lib/index.lil";
+
+export string toHtml(JsValue tree, JsValue options = JS.undefined()) {
+  return serialize(tree, options);
+}

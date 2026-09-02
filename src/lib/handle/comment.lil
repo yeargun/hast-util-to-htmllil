@@ -1,0 +1,10 @@
+import { bogusSubset, encodeCommentValue, stringifyEntities } from "../entities.lil";
+import { State, jsString } from "../types.lil";
+
+export string comment(JsValue node, int _index, JsValue _parent, State state) {
+  string value = jsString(JS.get(node, "value"));
+  if (state.settings.bogusComments) {
+    return "<?" + stringifyEntities(value, bogusSubset(), state.settings.characterReferences) + ">";
+  }
+  return "<!--" + encodeCommentValue(value, state.settings.characterReferences) + "-->";
+}

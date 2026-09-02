@@ -1,7 +1,7 @@
 import { writeFileSync } from "node:fs"
 import { dirname, resolve } from "node:path"
 import { fileURLToPath } from "node:url"
-import { html, svg } from "/tmp/package/index.js"
+import { html, svg } from "property-information"
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..")
 
@@ -34,5 +34,5 @@ const source = `export string htmlSchemaBlob = ${lilString(dump(html))};
 export string svgSchemaBlob = ${lilString(dump(svg))};
 `
 
-writeFileSync(resolve(root, "src/schema_data.lil"), source)
+writeFileSync(resolve(root, "src/lib/schema-data.lil"), source)
 console.log(`html props ${Object.keys(html.property).length}, svg props ${Object.keys(svg.property).length}`)

@@ -1,0 +1,30 @@
+import { childCount, childrenOf, isWhitespaceNode } from "../../types.lil";
+
+export int siblingOffset(JsValue parent, int index, int increment, bool includeWhitespace = false) {
+  JsValue children = childrenOf(parent);
+  int offset = index + increment;
+  int length = childCount(children);
+  while (offset >= 0 && offset < length) {
+    if (includeWhitespace || !isWhitespaceNode(children[offset])) {
+      return offset;
+    }
+    offset = offset + increment;
+  }
+  return -1;
+}
+
+export JsValue siblingAfter(JsValue parent, int index, bool includeWhitespace = false) {
+  int offset = siblingOffset(parent, index, 1, includeWhitespace);
+  if (offset < 0) {
+    return JS.undefined();
+  }
+  return childrenOf(parent)[offset];
+}
+
+export JsValue siblingBefore(JsValue parent, int index) {
+  int offset = siblingOffset(parent, index, -1, false);
+  if (offset < 0) {
+    return JS.undefined();
+  }
+  return childrenOf(parent)[offset];
+}

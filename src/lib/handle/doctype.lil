@@ -1,0 +1,13 @@
+import { State } from "../types.lil";
+
+export pure string doctype(JsValue _node, int _index, JsValue _parent, State state) {
+  string keyword = "doctype";
+  if (state.settings.upperDoctype) {
+    keyword = "DOCTYPE";
+  }
+  string gap = " ";
+  if (state.settings.tightDoctype) {
+    gap = "";
+  }
+  return "<!" + keyword + gap + "html>";
+}

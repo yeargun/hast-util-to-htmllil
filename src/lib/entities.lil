@@ -1,0 +1,187 @@
+import { CharacterReferences, charInSet, readCharacterReferences } from "./types.lil";
+
+export struct EntitySubset {
+  string characters;
+  bool whitespace;
+  bool nul;
+}
+
+pure bool isDecimal(int code) {
+  return code >= 48 && code <= 57;
+}
+
+pure bool isHexadecimal(int code) {
+  return isDecimal(code) || (code >= 65 && code <= 70) || (code >= 97 && code <= 102);
+}
+
+pure bool isAlphanumeric(int code) {
+  return isDecimal(code) || (code >= 65 && code <= 90) || (code >= 97 && code <= 122);
+}
+
+pure string hexadecimal(int code, int next, bool hasNext, CharacterReferences options) {
+  string value = "&#x" + code.toString(16).toUpperCase();
+  if (options.omitOptionalSemicolons && hasNext && next != 0 && !isHexadecimal(next)) {
+    return value;
+  }
+  return value + ";";
+}
+
+pure string decimal(int code, int next, bool hasNext, CharacterReferences options) {
+  string value = "&#" + code.toString();
+  if (options.omitOptionalSemicolons && hasNext && next != 0 && !isDecimal(next)) {
+    return value;
+  }
+  return value + ";";
+}
+
+pure string named(int code, int next, bool hasNext, bool attribute, CharacterReferences options) {
+  string name = "";
+  bool dangerous = false;
+  if (code == 34) {
+    name = "quot";
+  } else if (code == 38) {
+    name = "amp";
+  } else if (code == 60) {
+    name = "lt";
+    dangerous = true;
+  } else if (code == 62) {
+    name = "gt";
+    dangerous = true;
+  }
+  if (name.length == 0) {
+    return "";
+  }
+  string value = "&" + name;
+  if (options.omitOptionalSemicolons && !dangerous && (!attribute || (hasNext && next != 0 && next != 61 && !isAlphanumeric(next)))) {
+    return value;
+  }
+  return value + ";";
+}
+
+pure string formatEntity(int code, int next, bool hasNext, bool attribute, CharacterReferences options) {
+  string numeric = hexadecimal(code, next, hasNext, options);
+  string reference = "";
+  if (options.useNamedReferences || options.useShortestReferences) {
+    reference = named(code, next, hasNext, attribute, options);
+  }
+  if (options.useShortestReferences) {
+    string decimalReference = decimal(code, next, hasNext, options);
+    if (decimalReference.length < numeric.length) {
+      numeric = decimalReference;
+    }
+  }
+  if (reference.length > 0 && (!options.useShortestReferences || reference.length < numeric.length)) {
+    return reference;
+  }
+  return numeric;
+}
+
+pure bool isWhitespace(int code) {
+  return code == 9 || code == 10 || code == 12 || code == 13 || code == 32;
+}
+
+export string stringifyEntities(string value, EntitySubset subset, JsValue settings, bool attribute = false) {
+  CharacterReferences options = readCharacterReferences(settings);
+  string result = "";
+  int index = 0;
+  while (index < value.length) {
+    string character = value.charAt(index);
+    int code = character.charCodeAt(0);
+    if (charInSet(character, subset.characters) || (subset.whitespace && isWhitespace(code)) || (subset.nul && code == 0)) {
+      result = result + formatEntity(code, value.charCodeAt(index + 1), index + 1 < value.length, attribute, options);
+    } else {
+      result = result + character;
+    }
+    index = index + 1;
+  }
+  return result;
+}
+
+export pure EntitySubset textSubset() {
+  return EntitySubset{"<&", false, false};
+}
+
+export pure EntitySubset commentSubset() {
+  return EntitySubset{"<>", false, false};
+}
+
+export pure EntitySubset bogusSubset() {
+  return EntitySubset{">", false, false};
+}
+
+export pure EntitySubset nameSubset(bool parseErrors, bool dangerous) {
+  if (parseErrors) {
+    if (dangerous) {
+      return EntitySubset{"&/=>", true, false};
+    }
+    return EntitySubset{"\"&'/=>`", true, false};
+  }
+  if (dangerous) {
+    return EntitySubset{"\"&'/<=>", true, true};
+  }
+  return EntitySubset{"\"&'/<=>`", true, true};
+}
+
+export pure EntitySubset unquotedSubset(bool parseErrors, bool dangerous) {
+  if (parseErrors && dangerous) {
+    return EntitySubset{"&>", true, false};
+  }
+  return EntitySubset{"\"&'<=>`", true, true};
+}
+
+export pure EntitySubset singleSubset(bool parseErrors, bool dangerous) {
+  if (parseErrors) {
+    if (dangerous) {
+      return EntitySubset{"&'", false, false};
+    }
+    return EntitySubset{"\"&'`", false, false};
+  }
+  if (dangerous) {
+    return EntitySubset{"&'", false, true};
+  }
+  return EntitySubset{"\"&'`", false, true};
+}
+
+export pure EntitySubset doubleSubset(bool parseErrors, bool dangerous) {
+  if (parseErrors) {
+    if (dangerous) {
+      return EntitySubset{"\"&", false, false};
+    }
+    return EntitySubset{"\"&'`", false, false};
+  }
+  if (dangerous) {
+    return EntitySubset{"\"&", false, true};
+  }
+  return EntitySubset{"\"&'`", false, true};
+}
+
+export string encodeCommentValue(string value, JsValue options) {
+  string result = "";
+  int index = 0;
+  while (index < value.length) {
+    string rest = value.slice(index);
+    if (index == 0 && rest.charAt(0) == ">") {
+      result = result + stringifyEntities(">", commentSubset(), options);
+      index = index + 1;
+    } else if (index == 0 && rest.slice(0, 2) == "->") {
+      result = result + stringifyEntities("->", commentSubset(), options);
+      index = index + 2;
+    } else if (rest.slice(0, 4) == "<!--") {
+      result = result + stringifyEntities("<!--", commentSubset(), options);
+      index = index + 4;
+    } else if (rest.slice(0, 4) == "--!>") {
+      result = result + stringifyEntities("--!>", commentSubset(), options);
+      index = index + 4;
+    } else if (rest.slice(0, 3) == "-->") {
+      result = result + stringifyEntities("-->", commentSubset(), options);
+      index = index + 3;
+    } else if (rest == "<!-") {
+      result = result + stringifyEntities("<!-", commentSubset(), options);
+      index = value.length;
+    } else {
+      result = result + rest.charAt(0);
+      index = index + 1;
+    }
+  }
+  return result;
+}

@@ -1,0 +1,113 @@
+import { closing } from "./closing.lil";
+import { openingTag } from "./omission.lil";
+import { siblingAfter, siblingBefore } from "./util/siblings.lil";
+import { childCount, childIndexOf, childrenOf, stringField } from "../types.lil";
+
+bool isComment(JsValue node) {
+  return !(JS.isUndefined(node) || JS.isNullish(node)) && stringField(node, "type") == "comment";
+}
+
+bool isElementNamed(JsValue node, string tag) {
+  return !(JS.isUndefined(node) || JS.isNullish(node)) && stringField(node, "type") == "element" && stringField(node, "tagName") == tag;
+}
+
+bool textStartsWhitespace(JsValue node) {
+  if (JS.isUndefined(node) || JS.isNullish(node) || stringField(node, "type") != "text") {
+    return false;
+  }
+  JsValue value = JS.get(node, "value");
+  if (!(value is string) || value.length == 0) {
+    return false;
+  }
+  int code = value.charCodeAt(0);
+  return code == 9 || code == 10 || code == 12 || code == 13 || code == 32;
+}
+
+bool html(JsValue node) {
+  return !isComment(siblingAfter(node, -1));
+}
+
+bool head(JsValue node) {
+  JsValue children = childrenOf(node);
+  bool seenBase = false;
+  bool seenTitle = false;
+  int index = 0;
+  int length = childCount(children);
+  while (index < length) {
+    JsValue child = children[index];
+    if (stringField(child, "type") == "element") {
+      string tag = stringField(child, "tagName");
+      if (tag == "base") {
+        if (seenBase) {
+          return false;
+        }
+        seenBase = true;
+      } else if (tag == "title") {
+        if (seenTitle) {
+          return false;
+        }
+        seenTitle = true;
+      }
+    }
+    index = index + 1;
+  }
+  return length == 0 || stringField(children[0], "type") == "element";
+}
+
+bool body(JsValue node) {
+  JsValue first = siblingAfter(node, -1, true);
+  if (JS.isUndefined(first) || JS.isNullish(first)) {
+    return true;
+  }
+  if (isComment(first) || textStartsWhitespace(first)) {
+    return false;
+  }
+  if (stringField(first, "type") == "element") {
+    string tag = stringField(first, "tagName");
+    if (tag == "meta" || tag == "link" || tag == "script" || tag == "style" || tag == "template") {
+      return false;
+    }
+  }
+  return true;
+}
+
+bool colgroup(JsValue node, int index, JsValue parent) {
+  JsValue previous = siblingBefore(parent, index);
+  JsValue first = siblingAfter(node, -1, true);
+  if (!(JS.isUndefined(parent) || JS.isNullish(parent) || JS.isUndefined(previous) || JS.isNullish(previous)) && isElementNamed(previous, "colgroup") && closing(previous, childIndexOf(parent, previous), parent)) {
+    return false;
+  }
+  return isElementNamed(first, "col");
+}
+
+bool tbody(JsValue node, int index, JsValue parent) {
+  JsValue previous = siblingBefore(parent, index);
+  JsValue first = siblingAfter(node, -1);
+  if (!(JS.isUndefined(parent) || JS.isNullish(parent) || JS.isUndefined(previous) || JS.isNullish(previous))) {
+    string tag = stringField(previous, "tagName");
+    if (stringField(previous, "type") == "element" && (tag == "thead" || tag == "tbody") && closing(previous, childIndexOf(parent, previous), parent)) {
+      return false;
+    }
+  }
+  return isElementNamed(first, "tr");
+}
+
+export bool opening(JsValue node, int index, JsValue parent) {
+  string tag = stringField(node, "tagName");
+  if (!openingTag(tag)) {
+    return false;
+  }
+  if (tag == "body") {
+    return body(node);
+  }
+  if (tag == "colgroup") {
+    return colgroup(node, index, parent);
+  }
+  if (tag == "head") {
+    return head(node);
+  }
+  if (tag == "html") {
+    return html(node);
+  }
+  return tbody(node, index, parent);
+}

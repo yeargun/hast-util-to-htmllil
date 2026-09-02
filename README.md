@@ -1,6 +1,6 @@
 # @itslil/hast-util-to-html
 
-Official [`hast-util-to-html@9.0.5`](https://github.com/syntax-tree/hast-util-to-html) algorithms rewritten in LilScript. Official test suite 389/389. Not affiliated with upstream.
+Official [`hast-util-to-html@9.0.5`](https://github.com/syntax-tree/hast-util-to-html) algorithms rewritten in LilScript. Official test suite 381/381. Not affiliated with upstream.
 
 **Site:** [yeargun.github.io/hast-util-to-htmllil/](https://yeargun.github.io/hast-util-to-htmllil/)
 
@@ -15,6 +15,6 @@ Two compiles ship from the same `.lil` source:
 | **library** (npm) | `lilscript.toml` · `--target js-module` | reusable ESM. Export names and `extern class` keys stay. |
 | **closed** | `lilscript.closed.toml` · `--target js-module` | closed LilScript world. `extern class` keys may mangle. ESM export names stay so the lane is testable. |
 
-You publish the library lane. The closed artifact is `dist/to-html.closed.js`.
+You publish the library lane. `dist/to-html.closed.js` is diagnostic only.
 
 The LilScript compiler lives next door at `../lilscript`.

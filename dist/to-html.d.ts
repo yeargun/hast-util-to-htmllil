@@ -1,17 +1,26 @@
+export interface CharacterReferences {
+  omitOptionalSemicolons?: boolean
+  useNamedReferences?: boolean
+  useShortestReferences?: boolean
+}
+
+export type Quote = '"' | "'"
+export type Space = "html" | "svg"
+
 export interface Options {
   allowDangerousCharacters?: boolean | null
   allowDangerousHtml?: boolean | null
   allowParseErrors?: boolean | null
   bogusComments?: boolean | null
-  characterReferences?: Record<string, unknown> | null
+  characterReferences?: CharacterReferences | null
   closeEmptyElements?: boolean | null
   closeSelfClosing?: boolean | null
   collapseEmptyAttributes?: boolean | null
   omitOptionalTags?: boolean | null
   preferUnquoted?: boolean | null
-  quote?: '"' | "'" | null
+  quote?: Quote | null
   quoteSmart?: boolean | null
-  space?: "html" | "svg" | null
+  space?: Space | null
   tightAttributes?: boolean | null
   tightCommaSeparatedLists?: boolean | null
   tightDoctype?: boolean | null
@@ -20,4 +29,4 @@ export interface Options {
   voids?: ReadonlyArray<string> | null
 }
 
-export function toHtml(tree: unknown, options?: Options | null): string
+export function toHtml(tree: unknown[] | unknown, options?: Options | null): string

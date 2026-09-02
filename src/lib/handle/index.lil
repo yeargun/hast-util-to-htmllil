@@ -1,0 +1,41 @@
+import { comment } from "./comment.lil";
+import { doctype } from "./doctype.lil";
+import { element } from "./element.lil";
+import { raw } from "./raw.lil";
+import { root } from "./root.lil";
+import { text } from "./text.lil";
+import { State, fail, jsString } from "../types.lil";
+
+export string handle(JsValue node, int index, JsValue parent, State state) {
+  if (JS.isUndefined(node) || JS.isNullish(node) || JS.typeOf(node) != "object" || JS.isArray(node)) {
+    fail("Expected node, not `" + jsString(node) + "`");
+  }
+  JsValue typeValue = JS.get(node, "type");
+  if (!(typeValue is string)) {
+    fail("Expected node, not `" + jsString(node) + "`");
+  }
+  string type = "";
+  if (typeValue is string) {
+    type = typeValue;
+  }
+  if (type == "comment") {
+    return comment(node, index, parent, state);
+  }
+  if (type == "doctype") {
+    return doctype(node, index, parent, state);
+  }
+  if (type == "element") {
+    return element(node, index, parent, state);
+  }
+  if (type == "raw") {
+    return raw(node, index, parent, state);
+  }
+  if (type == "root") {
+    return root(node, index, parent, state);
+  }
+  if (type == "text") {
+    return text(node, index, parent, state);
+  }
+  fail("Cannot compile unknown node `" + type + "`");
+  return "";
+}

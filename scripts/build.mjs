@@ -40,7 +40,7 @@ function run(cmd, args) {
 
 function compileLil(compiler, configName, outputName) {
   run(compiler, [
-    resolve(root, "src", "entry.lil"),
+    resolve(root, "src", "index.lil"),
     "--target",
     "js-module",
     "--config",

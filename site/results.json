@@ -10,9 +10,9 @@
   "warmupDiscard": 3,
   "comparison": "Official rows are an esbuild bundle of hast-util-to-html@9.0.5 plus its runtime graph, then Terser or esbuild. LilScript is the compiled npm file. Closed is extern_fields=false.",
   "spec": {
-    "total": 389,
-    "pass": 389,
-    "label": "official suite"
+    "total": 455,
+    "pass": 455,
+    "label": "official and package suites"
   },
   "play": {
     "kind": "json-html",
@@ -56,19 +56,19 @@
     {
       "id": "itslil",
       "name": "@itslil/hast-util-to-html · library",
-      "raw": 28245,
-      "gzip9": 9389,
-      "brotli11": 8211,
+      "raw": 30291,
+      "gzip9": 10082,
+      "brotli11": 8825,
       "note": "LilScript js-module, extern_fields true. The npm ESM.",
       "primary": true
     },
     {
       "id": "itslil-closed",
       "name": "@itslil/hast-util-to-html · closed",
-      "raw": 28149,
-      "gzip9": 9326,
-      "brotli11": 8147,
-      "note": "Same source, extern_fields false"
+      "raw": 29875,
+      "gzip9": 9914,
+      "brotli11": 8664,
+      "note": "Same source, extern_fields false; diagnostic only"
     }
   ],
   "throughput": [

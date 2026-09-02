@@ -1,0 +1,13 @@
+import { stringifyEntities, textSubset } from "../entities.lil";
+import { State, jsString, stringField } from "../types.lil";
+
+export string text(JsValue node, int _index, JsValue parent, State state) {
+  string value = jsString(JS.get(node, "value"));
+  if (!(JS.isUndefined(parent) || JS.isNullish(parent)) && stringField(parent, "type") == "element") {
+    string tag = stringField(parent, "tagName");
+    if (tag == "script" || tag == "style") {
+      return value;
+    }
+  }
+  return stringifyEntities(value, textSubset(), state.settings.characterReferences);
+}

@@ -1,0 +1,242 @@
+extern JsValue Object;
+extern JsValue String;
+extern JsValue Number;
+extern JsValue Error;
+
+export extern class CharacterReferencesOptions {
+  JsValue omitOptionalSemicolons;
+  JsValue useNamedReferences;
+  JsValue useShortestReferences;
+}
+
+export extern class ToHtmlOptions {
+  JsValue allowDangerousHtml;
+  JsValue allowDangerousCharacters;
+  JsValue allowParseErrors;
+  JsValue bogusComments;
+  JsValue characterReferences;
+  JsValue closeEmptyElements;
+  JsValue closeSelfClosing;
+  JsValue collapseEmptyAttributes;
+  JsValue omitOptionalTags;
+  JsValue preferUnquoted;
+  JsValue quote;
+  JsValue quoteSmart;
+  JsValue space;
+  JsValue tightAttributes;
+  JsValue tightCommaSeparatedLists;
+  JsValue tightDoctype;
+  JsValue tightSelfClosing;
+  JsValue upperDoctype;
+  JsValue voids;
+}
+
+export enum Space { Html, Svg }
+
+export struct CharacterReferences {
+  bool omitOptionalSemicolons;
+  bool useNamedReferences;
+  bool useShortestReferences;
+}
+
+export struct Settings {
+  bool omitOptionalTags;
+  bool allowParseErrors;
+  bool allowDangerousCharacters;
+  bool quoteSmart;
+  bool preferUnquoted;
+  bool tightAttributes;
+  bool upperDoctype;
+  bool tightDoctype;
+  bool bogusComments;
+  bool tightCommaSeparatedLists;
+  bool tightSelfClosing;
+  bool collapseEmptyAttributes;
+  bool allowDangerousHtml;
+  JsValue voids;
+  JsValue characterReferences;
+  bool closeSelfClosing;
+  bool closeEmptyElements;
+}
+
+export struct State {
+  Settings settings;
+  Space space;
+  string quote;
+  string alternative;
+}
+
+export bool hasOwn(JsValue object, string key) {
+  return JS.call(JS.get(JS.get(Object, "prototype"), "hasOwnProperty"), object, key).truthy();
+}
+
+export CharacterReferences readCharacterReferences(JsValue value) {
+  JsValue copied = JS.call(JS.get(Object, "assign"), Object, JS.object(), value);
+  CharacterReferencesOptions options = JS.assume(copied);
+  return CharacterReferences{
+    hasOwn(copied, "omitOptionalSemicolons") && optionFlag(options.omitOptionalSemicolons),
+    hasOwn(copied, "useNamedReferences") && optionFlag(options.useNamedReferences),
+    hasOwn(copied, "useShortestReferences") && optionFlag(options.useShortestReferences)
+  };
+}
+
+export void defineOwn(JsValue object, string key, JsValue value) {
+  JsValue descriptor = JS.object(
+    "value", value,
+    "enumerable", true,
+    "configurable", true,
+    "writable", true
+  );
+  JS.call(JS.get(Object, "defineProperty"), Object, object, key, descriptor);
+}
+
+export string jsString(JsValue value) {
+  if (value is string) {
+    return value;
+  }
+  if (JS.isUndefined(value)) {
+    return "undefined";
+  }
+  if (JS.isNullish(value)) {
+    return "null";
+  }
+  return JS.string(JS.call(String, JS.undefined(), value));
+}
+
+export string stringField(JsValue node, string key) {
+  JsValue value = JS.get(node, key);
+  if (value is string) {
+    return value;
+  }
+  return "";
+}
+
+export bool optionFlag(JsValue value) {
+  return !(JS.isUndefined(value) || JS.isNullish(value)) && value.truthy();
+}
+
+export bool isNaNNumber(JsValue value) {
+  return JS.call(JS.get(Number, "isNaN"), JS.undefined(), value).truthy();
+}
+
+export bool isJsNumber(JsValue value) {
+  return JS.typeOf(value) == "number";
+}
+
+export int childCount(JsValue nodes) {
+  if (!JS.isArray(nodes)) {
+    return 0;
+  }
+  return JS.number(JS.get(nodes, "length")).toInt();
+}
+
+export JsValue childrenOf(JsValue parent) {
+  if (JS.isUndefined(parent) || JS.isNullish(parent)) {
+    return JS.array();
+  }
+  JsValue children = JS.get(parent, "children");
+  if (JS.isArray(children)) {
+    return children;
+  }
+  return JS.array();
+}
+
+export pure bool defaultVoidName(string tag) {
+  return tag == "area" || tag == "base" || tag == "basefont" || tag == "bgsound" || tag == "br" || tag == "col" || tag == "command" || tag == "embed" || tag == "frame" || tag == "hr" || tag == "image" || tag == "img" || tag == "input" || tag == "keygen" || tag == "link" || tag == "meta" || tag == "param" || tag == "source" || tag == "track" || tag == "wbr";
+}
+
+export bool voidsIncludes(JsValue voids, string tag) {
+  if (JS.isUndefined(voids) || JS.isNullish(voids) || !voids.truthy()) {
+    return defaultVoidName(tag);
+  }
+  if (!JS.isArray(voids)) {
+    return JS.call(JS.get(voids, "includes"), voids, tag).truthy();
+  }
+  int index = 0;
+  int length = childCount(voids);
+  while (index < length) {
+    if (jsString(voids[index]) == tag) {
+      return true;
+    }
+    index = index + 1;
+  }
+  return false;
+}
+
+export pure bool isBlankText(string value) {
+  int index = 0;
+  while (index < value.length) {
+    int code = value.charCodeAt(index);
+    if (code != 9 && code != 10 && code != 12 && code != 13 && code != 32) {
+      return false;
+    }
+    index = index + 1;
+  }
+  return true;
+}
+
+export bool isWhitespaceNode(JsValue node) {
+  if (node is string) {
+    return isBlankText(node);
+  }
+  if (JS.isUndefined(node) || JS.isNullish(node) || JS.typeOf(node) != "object") {
+    return false;
+  }
+  return stringField(node, "type") == "text" && isBlankText(jsString(JS.get(node, "value")));
+}
+
+export pure int countChar(string value, string character) {
+  int count = 0;
+  int index = 0;
+  while (index < value.length) {
+    if (value.charAt(index) == character) {
+      count = count + 1;
+    }
+    index = index + 1;
+  }
+  return count;
+}
+
+export pure bool charInSet(string character, string set) {
+  int index = 0;
+  while (index < set.length) {
+    if (set.charAt(index) == character) {
+      return true;
+    }
+    index = index + 1;
+  }
+  return false;
+}
+
+export pure bool validDataName(string value) {
+  if (value.length < 5 || value.toLowerCase().slice(0, 4) != "data") {
+    return false;
+  }
+  int index = 4;
+  while (index < value.length) {
+    int code = value.charCodeAt(index);
+    bool valid = (code >= 48 && code <= 57) || (code >= 65 && code <= 90) || (code >= 97 && code <= 122) || code == 45 || code == 95 || code == 46 || code == 58;
+    if (!valid) {
+      return false;
+    }
+    index = index + 1;
+  }
+  return true;
+}
+
+export int childIndexOf(JsValue parent, JsValue child) {
+  JsValue children = childrenOf(parent);
+  int index = 0;
+  int length = childCount(children);
+  while (index < length) {
+    if (JS.strictEqual(children[index], child)) {
+      return index;
+    }
+    index = index + 1;
+  }
+  return -1;
+}
+
+export void fail(string message) {
+  throw JS.construct(Error, message);
+}
