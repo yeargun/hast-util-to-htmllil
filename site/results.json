@@ -10,9 +10,9 @@
   "warmupDiscard": 3,
   "comparison": "Official rows are an esbuild bundle of hast-util-to-html@9.0.5 plus its runtime graph, then Terser or esbuild. LilScript is the compiled npm file. Closed is extern_fields=false.",
   "spec": {
-    "total": 455,
-    "pass": 455,
-    "label": "official and package suites"
+    "total": 456,
+    "pass": 456,
+    "label": "repository checks"
   },
   "play": {
     "kind": "json-html",
@@ -67,7 +67,7 @@
       "raw": 29049,
       "gzip9": 9635,
       "brotli11": 8459,
-      "note": "Fresh packaged ESM, rebuilt with compiler 63c2896a71.",
+      "note": "ESM output from LilScript 63c2896.",
       "primary": true,
       "measuredAt": "2026-09-10T13:56:40Z",
       "artifactSha256": "4878b006fd9f2f96a85bbd6024feb004a9741599791cff9d958f53f0f0ed103b"
@@ -78,7 +78,7 @@
       "raw": 28754,
       "gzip9": 9468,
       "brotli11": 8313,
-      "note": "Same source, extern_fields false; diagnostic only",
+      "note": "ESM output from LilScript 63c2896.",
       "measuredAt": "2026-09-10T13:56:40Z",
       "artifactSha256": "0e9a2b588d016067fa1657eaead484dd4f71b6b3311c3758bb8cb05847d782c4"
     }
@@ -95,7 +95,5 @@
       "documentMs": 0.01912499999980355
     }
   ],
-  "sizeMeasuredAt": "2026-09-10T13:56:40Z",
-  "buildAudit": "./build-audit.json",
-  "runtimeEvidenceStatus": "Historical; runtime throughput was not republished as a measurement of this compiler."
+  "sizeMeasuredAt": "2026-09-10T13:56:40Z"
 }
