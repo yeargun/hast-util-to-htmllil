@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "name": "hast-util-to-htmllil",
+  "measuredAt": "2026-09-10T13:56:40Z",
+  "status": "verified",
+  "buildPassed": true,
+  "summary": "The fresh artifact was checked against the repository test command.",
+  "sourceCommit": "f682d3c198887942dfe4e84c55b71184d6119272",
+  "previousPublicCommit": "f682d3c198887942dfe4e84c55b71184d6119272",
+  "compiler": {
+    "commit": "63c2896a71e60cbcca7870fe979f9d6ecaff3452",
+    "sha256": "2319462ef7d858c8e2a5a767260aa4f80d325e0045afa0cc86cc122d1299b059",
+    "profile": "release",
+    "dirty": false
+  },
+  "machine": {
+    "cpu": "AMD EPYC 9V45 96-Core Processor",
+    "logicalCpus": 16,
+    "affinityCpus": 16,
+    "memoryBytes": 33648435200,
+    "os": "Ubuntu 24.04.4 LTS",
+    "kernel": "6.17.0-1022-azure",
+    "architecture": "x86_64",
+    "node": "v22.23.2",
+    "rayonThreads": 16,
+    "provider": "Azure",
+    "instanceClass": "Standard_D16als_v7",
+    "parallelPortBuildsOnMachine": 1,
+    "loadAtStart": [
+      7.33349609375,
+      3.27197265625,
+      1.53564453125
+    ],
+    "loadAtEnd": [
+      6.75341796875,
+      3.27978515625,
+      1.5576171875
+    ],
+    "concurrencyNote": "The audit scheduled one port per worker, but this is a shared pool. Outside compiler jobs were observed during the run; timings are contextual wall times, not controlled speedup benchmarks."
+  },
+  "upstream": {
+    "name": "hast-util-to-htmllil",
+    "package": "hast-util-to-html",
+    "pinned": "9.0.5",
+    "latest": "9.0.5",
+    "source": "https://www.npmjs.com/package/hast-util-to-html"
+  },
+  "comparisonScope": "hast-util-to-html@9.0.5 public ESM runtime graph; dependency installation excluded; this is a comparison bundle build, not the upstream vendor release pipeline Sizes use canonical zlib 1.3.1 gzip-9 and Google Brotli 1.1.0 quality 11.",
+  "sizes": {
+    "previous": {
+      "id": "itslil",
+      "name": "@itslil/hast-util-to-html \u00b7 library",
+      "raw": 30291,
+      "gzip9": 10082,
+      "brotli11": 8825,
+      "note": "LilScript js-module, extern_fields true. The npm ESM.",
+      "primary": true
+    },
+    "current": {
+      "path": "dist/to-html.esm.js",
+      "raw": 29049,
+      "gzip9": 9635,
+      "brotli11": 8459,
+      "sha256": "4878b006fd9f2f96a85bbd6024feb004a9741599791cff9d958f53f0f0ed103b"
+    },
+    "upstream": {
+      "path": ".page-audit/upstream/official.esm.js",
+      "raw": 31836,
+      "gzip9": 11225,
+      "brotli11": 9840,
+      "sha256": "1aea365923d09bb4dd0c7ae45758954386355951b485096f96cda6f956839f7e"
+    }
+  },
+  "officialArtifacts": [
+    {
+      "path": ".page-audit/upstream/official.terser-nomangle.js",
+      "raw": 39666,
+      "gzip9": 12307,
+      "brotli11": 10814,
+      "sha256": "8b8320229537a4191720c2f8c1b3f673fef29b1859a593896017c5c6de7c8ebb"
+    },
+    {
+      "path": ".page-audit/upstream/official.esm.js",
+      "raw": 31836,
+      "gzip9": 11225,
+      "brotli11": 9840,
+      "sha256": "1aea365923d09bb4dd0c7ae45758954386355951b485096f96cda6f956839f7e"
+    },
+    {
+      "path": ".page-audit/upstream/official.unminified.js",
+      "raw": 58318,
+      "gzip9": 14569,
+      "brotli11": 12817,
+      "sha256": "6b2f81d4f3d11537eff8afe2d7250bccfb10cef33944365b8104014eb4cf4a7e"
+    },
+    {
+      "path": ".page-audit/upstream/official.esbuild.js",
+      "raw": 32747,
+      "gzip9": 11217,
+      "brotli11": 10008,
+      "sha256": "5e4cd7ddeafe4ea53d5a32a6bfa9bc74a398730bc412df5750c4693f802cdf3b"
+    }
+  ],
+  "candidateArtifacts": [
+    {
+      "path": "dist/to-html.umd.js",
+      "raw": 30967,
+      "gzip9": 10399,
+      "brotli11": 9122,
+      "sha256": "5d1f3cef56ce125544e69918c1ff426a618601618c8cdda8c272edc7ce49818d"
+    },
+    {
+      "path": "dist/to-html.cjs",
+      "raw": 30896,
+      "gzip9": 10371,
+      "brotli11": 9096,
+      "sha256": "61dfe5e1f0fe917ff5c8deb1acb1da7290c1a73f62d961dd62772c00b6ff8c83"
+    },
+    {
+      "path": "dist/to-html.esm.js",
+      "raw": 29049,
+      "gzip9": 9635,
+      "brotli11": 8459,
+      "sha256": "4878b006fd9f2f96a85bbd6024feb004a9741599791cff9d958f53f0f0ed103b"
+    },
+    {
+      "path": "dist/to-html.raw.js",
+      "raw": 28953,
+      "gzip9": 9565,
+      "brotli11": 8397,
+      "sha256": "81aa66a863369f1a13d9c77347c4f5e69283e0d072e5aed3713532740a1a28d3"
+    },
+    {
+      "path": "dist/to-html.closed.js",
+      "raw": 28754,
+      "gzip9": 9468,
+      "brotli11": 8313,
+      "sha256": "0e9a2b588d016067fa1657eaead484dd4f71b6b3311c3758bb8cb05847d782c4"
+    },
+    {
+      "path": ".page-audit/upstream/official.esbuild.js",
+      "raw": 32747,
+      "gzip9": 11217,
+      "brotli11": 10008,
+      "sha256": "5e4cd7ddeafe4ea53d5a32a6bfa9bc74a398730bc412df5750c4693f802cdf3b"
+    },
+    {
+      "path": ".page-audit/upstream/official.terser-nomangle.js",
+      "raw": 39666,
+      "gzip9": 12307,
+      "brotli11": 10814,
+      "sha256": "8b8320229537a4191720c2f8c1b3f673fef29b1859a593896017c5c6de7c8ebb"
+    },
+    {
+      "path": ".page-audit/upstream/official.unminified.js",
+      "raw": 58318,
+      "gzip9": 14569,
+      "brotli11": 12817,
+      "sha256": "6b2f81d4f3d11537eff8afe2d7250bccfb10cef33944365b8104014eb4cf4a7e"
+    },
+    {
+      "path": ".page-audit/upstream/official.esm.js",
+      "raw": 31836,
+      "gzip9": 11225,
+      "brotli11": 9840,
+      "sha256": "1aea365923d09bb4dd0c7ae45758954386355951b485096f96cda6f956839f7e"
+    }
+  ],
+  "timing": {
+    "primaryCompilerSeconds": 1.7468347549438477,
+    "primaryScope": "One real compiler process, including code generation and codec-guided search; excludes subsequent package wrapping.",
+    "packageSeconds": 3.4726978319999944,
+    "packageScope": "node scripts/build.mjs --compile --force; 2 successful compiler invocations plus package generation.",
+    "upstreamSeconds": 0.23246387799999996,
+    "upstreamScope": "hast-util-to-html@9.0.5 public ESM runtime graph; dependency installation excluded; this is a comparison bundle build, not the upstream vendor release pipeline",
+    "protocol": "Same shared worker for both lanes; one fresh LilScript package build; median of three sequential upstream ESM builds (PlayCanvas records one native reference build). Outside compiler jobs were observed in the pool, so contention is not excluded. Dependencies, tests and compression measurement are outside these build times.",
+    "upstreamSamples": [
+      {
+        "bundleSeconds": 0.010624904000000001,
+        "wallSeconds": 0.326979984
+      },
+      {
+        "bundleSeconds": 0.01292710900000003,
+        "wallSeconds": 0.23246387799999996
+      },
+      {
+        "bundleSeconds": 0.007902631999999925,
+        "wallSeconds": 0.15855468799999994
+      }
+    ]
+  },
+  "behavior": {
+    "command": "node --test test/*.test.mjs test/official/index.js",
+    "summary": "Repository test command passed (exit 0). # tests 456 \u00b7 # pass 456 \u00b7 # fail 0",
+    "before": {
+      "exitCode": 0,
+      "failures": [],
+      "logSha256": "98f2ed9cb888573ba0e8cc4943eed227c55e099c1b8d4e45422a8d7ad97e4998"
+    },
+    "after": {
+      "exitCode": 0,
+      "failures": [],
+      "tail": "rors, work, even though `allowParseErrors` mode is on\n    ok 37 - should encode characters in attribute names which cause parse errors, work, even though `allowParseErrors` mode is on\n      ---\n      duration_ms: 0.085978\n      type: 'test'\n      ...\n    # Subtest: should encode characters in attribute values which cause parse errors, work, even though `allowParseErrors` mode is on\n    ok 38 - should encode characters in attribute values which cause parse errors, work, even though `allowParseErrors` mode is on\n      ---\n      duration_ms: 0.057606\n      type: 'test'\n      ...\n    # Subtest: should not encode characters which cause XSS issues in older browsers, in `allowDangerousCharacters` mode\n    ok 39 - should not encode characters which cause XSS issues in older browsers, in `allowDangerousCharacters` mode\n      ---\n      duration_ms: 0.055072\n      type: 'test'\n      ...\n    # Subtest: should ignore attributes set to `null`\n    ok 40 - should ignore attributes set to `null`\n      ---\n      duration_ms: 0.040661\n      type: 'test'\n      ...\n    # Subtest: should ignore attributes set to `undefined`\n    ok 41 - should ignore attributes set to `undefined`\n      ---\n      duration_ms: 0.04\n      type: 'test'\n      ...\n    # Subtest: should serialize an SVG tree\n    ok 42 - should serialize an SVG tree\n      ---\n      duration_ms: 0.165146\n      type: 'test'\n      ...\n    # Subtest: should serialize SVG props on an `svg` element in HTML\n    ok 43 - should serialize SVG props on an `svg` element in HTML\n      ---\n      duration_ms: 0.129503\n      type: 'test'\n      ...\n    # Subtest: should serialize an HTML tree with embedded HTML\n    ok 44 - should serialize an HTML tree with embedded HTML\n      ---\n      duration_ms: 0.107961\n      type: 'test'\n      ...\n    1..44\nok 35 - svg\n  ---\n  duration_ms: 5.453978\n  type: 'test'\n  ...\n# Subtest: `root`\n    # Subtest: should serialize `root`s\n    ok 1 - should serialize `root`s\n      ---\n      duration_ms: 0.065798\n      type: 'test'\n      ...\n    # Subtest: should serialize `root`s w/o children\n    ok 2 - should serialize `root`s w/o children\n      ---\n      duration_ms: 0.059919\n      type: 'test'\n      ...\n    1..2\nok 36 - `root`\n  ---\n  duration_ms: 0.220078\n  type: 'test'\n  ...\n# Subtest: `text`\n    # Subtest: should serialize `text`s\n    ok 1 - should serialize `text`s\n      ---\n      duration_ms: 0.046499\n      type: 'test'\n      ...\n    # Subtest: should encode `text`s\n    ok 2 - should encode `text`s\n      ---\n      duration_ms: 0.036114\n      type: 'test'\n      ...\n    # Subtest: should not encode `text`s in `style`\n    ok 3 - should not encode `text`s in `style`\n      ---\n      duration_ms: 0.038087\n      type: 'test'\n      ...\n    # Subtest: should not encode `text`s in `script`\n    ok 4 - should not encode `text`s in `script`\n      ---\n      duration_ms: 0.032608\n      type: 'test'\n      ...\n    # Subtest: should encode `text`s in other nodes\n    ok 5 - should encode `text`s in other nodes\n      ---\n      duration_ms: 0.039489\n      type: 'test'\n      ...\n    1..5\nok 37 - `text`\n  ---\n  duration_ms: 0.335741\n  type: 'test'\n  ...\n# Subtest: site\n    # Subtest: has a markedlil-style lab with receipts\n    ok 1 - has a markedlil-style lab with receipts\n      ---\n      duration_ms: 0.519164\n      type: 'test'\n      ...\n    1..1\nok 38 - site\n  ---\n  duration_ms: 1.061644\n  type: 'suite'\n  ...\n# Subtest: @itslil/hast-util-to-html library\n    # Subtest: exports toHtml\n    ok 1 - exports toHtml\n      ---\n      duration_ms: 1.259429\n      type: 'test'\n      ...\n    # Subtest: keeps pinned option and tree keys in the library artifact\n    ok 2 - keeps pinned option and tree keys in the library artifact\n      ---\n      duration_ms: 0.500267\n      type: 'test'\n      ...\n    # Subtest: serializes a hast fixture to html\n    ok 3 - serializes a hast fixture to html\n      ---\n      duration_ms: 0.686003\n      type: 'test'\n      ...\n    # Subtest: escapes text and attributes\n    ok 4 - escapes text and attributes\n      ---\n      duration_ms: 2.083839\n      type: 'test'\n      ...\n    # Subtest: joins className and emits boolean and void markup\n    ok 5 - joins className and emits boolean and void markup\n      ---\n      duration_ms: 1.126341\n      type: 'test'\n      ...\n    # Subtest: emits raw only when allowDangerousHtml is set\n    ok 6 - emits raw only when allowDangerousHtml is set\n      ---\n      duration_ms: 0.215562\n      type: 'test'\n      ...\n    1..6\nok 39 - @itslil/hast-util-to-html library\n  ---\n  duration_ms: 6.919795\n  type: 'suite'\n  ...\n# Subtest: @itslil/hast-util-to-html closed lane\n    # Subtest: exists and still serializes a tree\n    ok 1 - exists and still serializes a tree\n      ---\n      duration_ms: 1.986645\n      type: 'test'\n      ...\n    1..1\nok 40 - @itslil/hast-util-to-html closed lane\n  ---\n  duration_ms: 2.316176\n  type: 'suite'\n  ...\n1..40\n# tests 456\n# suites 4\n# pass 456\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 163.493623\n",
+      "logSha256": "05df6f84815800f31ee2155f2b3342a0d0d26857c5e362a0109dfb38046d0366"
+    }
+  },
+  "findings": [
+    "Published-to-fresh Brotli drift: -366 bytes (-4.15%). This includes port source/config changes and compiler changes."
+  ],
+  "primaryArtifact": "dist/to-html.esm.js",
+  "beforePage": {
+    "url": "https://yeargun.github.io/hast-util-to-htmllil/",
+    "status": 200,
+    "sha256": "5933b7230f67a710670d16eb638b2bcb1afa518dd0f94cad14deb5d9bc43419c",
+    "lastModified": "Wed, 02 Sep 2026 15:24:39 GMT"
+  },
+  "codecSha256": "9257fd055728895c11b9c4b0d882895d7d11bb3dd3495f560123879ca2bc3cd6",
+  "publicationArtifacts": [
+    {
+      "path": "dist/to-html.umd.js",
+      "sha256": "5d1f3cef56ce125544e69918c1ff426a618601618c8cdda8c272edc7ce49818d"
+    },
+    {
+      "path": "dist/to-html.cjs",
+      "sha256": "61dfe5e1f0fe917ff5c8deb1acb1da7290c1a73f62d961dd62772c00b6ff8c83"
+    },
+    {
+      "path": "dist/to-html.esm.js",
+      "sha256": "4878b006fd9f2f96a85bbd6024feb004a9741599791cff9d958f53f0f0ed103b"
+    },
+    {
+      "path": "dist/to-html.closed.js",
+      "sha256": "0e9a2b588d016067fa1657eaead484dd4f71b6b3311c3758bb8cb05847d782c4"
+    }
+  ],
+  "publicationPolicy": "Promote freshly tested distribution",
+  "publicationBase": "f682d3c198887942dfe4e84c55b71184d6119272",
+  "publicationSourceFingerprint": "5a87afa626aff3b694a9071ccdc8368943a826f19b0d625b65ef2548fa1f8976"
+}
