@@ -1,7 +1,12 @@
 # reusable ESM — host-visible names stay
 [javascript]
 priority = "size-first"
-optimization_level = 12
+# 8.90: level 12 -> 15, measured -17 Brotli on this port's own
+# artifact. Swept across the fleet the level is nearly inert (-160 over 22,
+# and katexlil and react-markdownlil do not move at all), so it lands per
+# port where it pays rather than as a default.
+optimization_level = 15
+
 cost_model = "brotli"
 assume_pristine_builtins = true
 strip_console = true
