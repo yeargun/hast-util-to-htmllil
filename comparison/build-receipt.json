@@ -238,12 +238,38 @@
   "publicationSourceFingerprint": "5a87afa626aff3b694a9071ccdc8368943a826f19b0d625b65ef2548fa1f8976",
   "comparisonArtifacts": [
     {
+      "path": "site/esm-comparison/original.js",
+      "sha256": "1aea365923d09bb4dd0c7ae45758954386355951b485096f96cda6f956839f7e"
+    },
+    {
       "path": "site/esm-comparison/lilscript.js",
       "sha256": "4878b006fd9f2f96a85bbd6024feb004a9741599791cff9d958f53f0f0ed103b"
     },
     {
-      "path": "site/esm-comparison/original.js",
-      "sha256": "1aea365923d09bb4dd0c7ae45758954386355951b485096f96cda6f956839f7e"
+      "path": "site/source-build.json",
+      "sha256": "4bbdcb0b0364607eb1c9dc84c223c77af11d1d53ca72efe3ecf06177130ac893"
+    },
+    {
+      "path": "site/comparison.json",
+      "sha256": "5b37af78dfb7b6aa349d5398671067f3b0401570da0ee5efff75c352a0e7eafb"
     }
-  ]
+  ],
+  "sourceBuildReceipt": "comparison/source-build/result.json",
+  "currentMeasurement": {
+    "compiler": {
+      "commit": "4dc4e3337d9ffd758d65e3852682d6e13d9331c1",
+      "sha256": "0616048498eb9eb2e4bd75b39e8e6a083733ada647e16108edfee30ad183beeb"
+    },
+    "source": {
+      "commit": "f682d3c198887942dfe4e84c55b71184d6119272"
+    },
+    "upstream": {
+      "repository": "https://github.com/syntax-tree/hast-util-to-html.git",
+      "commit": "d115f5beab200c819699e1db9d7eb7b5b1009a21",
+      "package": "hast-util-to-html",
+      "version": "9.0.5",
+      "directory": "."
+    },
+    "compatibility": "Runtime checks: 456/456 pass."
+  }
 }

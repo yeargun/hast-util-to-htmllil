@@ -1,0 +1,113 @@
+{
+  "source": {
+    "repository": "https://github.com/syntax-tree/hast-util-to-html.git",
+    "commit": "d115f5beab200c819699e1db9d7eb7b5b1009a21",
+    "package": "hast-util-to-html",
+    "version": "9.0.5",
+    "directory": "."
+  },
+  "entry": "index.js",
+  "scope": "hast-util-to-html@9.0.5 public ESM runtime graph; dependency installation excluded; this is a comparison bundle build, not the upstream vendor release pipeline",
+  "external": [],
+  "samples": [
+    {
+      "bundleSeconds": 0.012563631999999991,
+      "wallSeconds": 0.13207750899999998
+    },
+    {
+      "bundleSeconds": 0.007769848999999994,
+      "wallSeconds": 0.09297214899999998
+    },
+    {
+      "bundleSeconds": 0.0067096879999999715,
+      "wallSeconds": 0.09227498400000002
+    }
+  ],
+  "medianSeconds": 0.09297214899999998,
+  "toolchain": {
+    "esbuild": "0.28.1",
+    "terser": "5.51.2"
+  },
+  "artifacts": [
+    {
+      "path": "original.esm.js",
+      "raw": 31836,
+      "gzip9": 11225,
+      "brotli11": 9840,
+      "sha256": "1aea365923d09bb4dd0c7ae45758954386355951b485096f96cda6f956839f7e"
+    },
+    {
+      "path": "original.unminified.js",
+      "raw": 57946,
+      "gzip9": 14554,
+      "brotli11": 12788,
+      "sha256": "79762f8b01e080766ef764b50c8a31c4be37c160b9456107526e4444529c0fe8"
+    },
+    {
+      "path": "original.terser-nomangle.js",
+      "raw": 39666,
+      "gzip9": 12307,
+      "brotli11": 10814,
+      "sha256": "8b8320229537a4191720c2f8c1b3f673fef29b1859a593896017c5c6de7c8ebb"
+    },
+    {
+      "path": "original.esbuild.js",
+      "raw": 32747,
+      "gzip9": 11217,
+      "brotli11": 10008,
+      "sha256": "5e4cd7ddeafe4ea53d5a32a6bfa9bc74a398730bc412df5750c4693f802cdf3b"
+    }
+  ],
+  "inputs": [
+    "node_modules/html-void-elements/index.js",
+    "node_modules/property-information/lib/util/schema.js",
+    "node_modules/property-information/lib/util/merge.js",
+    "node_modules/property-information/lib/normalize.js",
+    "node_modules/property-information/lib/util/info.js",
+    "node_modules/property-information/lib/util/types.js",
+    "node_modules/property-information/lib/util/defined-info.js",
+    "node_modules/property-information/lib/util/create.js",
+    "node_modules/property-information/lib/aria.js",
+    "node_modules/property-information/lib/util/case-sensitive-transform.js",
+    "node_modules/property-information/lib/util/case-insensitive-transform.js",
+    "node_modules/property-information/lib/html.js",
+    "node_modules/property-information/lib/svg.js",
+    "node_modules/property-information/lib/xlink.js",
+    "node_modules/property-information/lib/xmlns.js",
+    "node_modules/property-information/lib/xml.js",
+    "node_modules/property-information/lib/hast-to-react.js",
+    "node_modules/property-information/lib/find.js",
+    "node_modules/property-information/index.js",
+    "node_modules/zwitch/index.js",
+    "node_modules/stringify-entities/lib/core.js",
+    "node_modules/stringify-entities/lib/util/to-hexadecimal.js",
+    "node_modules/stringify-entities/lib/util/to-decimal.js",
+    "node_modules/character-entities-legacy/index.js",
+    "node_modules/character-entities-html4/index.js",
+    "node_modules/stringify-entities/lib/constant/dangerous.js",
+    "node_modules/stringify-entities/lib/util/to-named.js",
+    "node_modules/stringify-entities/lib/util/format-smart.js",
+    "node_modules/stringify-entities/lib/util/format-basic.js",
+    "node_modules/stringify-entities/lib/index.js",
+    "node_modules/stringify-entities/index.js",
+    "lib/handle/comment.js",
+    "lib/handle/doctype.js",
+    "node_modules/ccount/index.js",
+    "node_modules/comma-separated-tokens/index.js",
+    "node_modules/space-separated-tokens/index.js",
+    "node_modules/hast-util-whitespace/lib/index.js",
+    "node_modules/hast-util-whitespace/index.js",
+    "lib/omission/util/siblings.js",
+    "lib/omission/omission.js",
+    "lib/omission/closing.js",
+    "lib/omission/opening.js",
+    "lib/handle/element.js",
+    "lib/handle/text.js",
+    "lib/handle/raw.js",
+    "lib/handle/root.js",
+    "lib/handle/index.js",
+    "lib/index.js",
+    "index.js",
+    "public-esm-entry.mjs"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "source": {
+    "repository": "https://github.com/syntax-tree/hast-util-to-html.git",
+    "commit": "d115f5beab200c819699e1db9d7eb7b5b1009a21",
+    "package": "hast-util-to-html",
+    "version": "9.0.5",
+    "directory": "."
+  },
+  "portSource": {
+    "commit": "f682d3c198887942dfe4e84c55b71184d6119272"
+  },
+  "compilerCommit": "4dc4e3337d9ffd758d65e3852682d6e13d9331c1",
+  "install": [
+    "npm",
+    "install",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "setup": [
+    [
+      "npm",
+      "install",
+      "--save-dev",
+      "--save-exact",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund",
+      "@types/hast@3.0.4",
+      "typescript@5.5.4"
+    ]
+  ],
+  "build": [
+    "npm",
+    "run",
+    "build"
+  ],
+  "clean": [],
+  "entry": "index.js",
+  "defaultExport": false,
+  "external": [],
+  "esmScope": "hast-util-to-html@9.0.5 public ESM runtime graph; dependency installation excluded; this is a comparison bundle build, not the upstream vendor release pipeline",
+  "lilscriptBuild": "node scripts/build.mjs --compile --force",
+  "test": "node --test test/*.test.mjs test/official/index.js",
+  "prerequisiteAdjustments": "Pin declared development type/tool dependencies to versions compatible with this source release: @types/hast@3.0.4, typescript@5.5.4"
+}
