@@ -1,23 +1,45 @@
-# reusable ESM — host-visible names stay
+# Compiler-owned delivery; no JavaScript post-minifier or export rewriting.
+[policy]
+version = 3
 [javascript]
 priority = "size-first"
-# 8.90: level 12 -> 15, measured -17 Brotli on this port's own
-# artifact. Swept across the fleet the level is nearly inert (-160 over 22,
-# and katexlil and react-markdownlil do not move at all), so it lands per
-# port where it pays rather than as a default.
-optimization_level = 15
-
-cost_model = "brotli"
+# Assumes unpatched platform builtins; disable when consumers replace them.
 assume_pristine_builtins = true
-strip_console = true
-local_name_reserve = 48
-candidate_search = "off"
-function_spelling = "arrow"
-public_aggregate_abi = "named"
+# Remove debugLog instrumentation; ordinary print and host console effects remain.
+strip_debug = true
 
+# Preserved effort setting. 13 favors size; 14/15 allow more expensive marginal searches.
+[effort]
+level = 15
+
+# Optimize the delivered files for this codec, independently of raw/gzip objectives.
+[objective]
+codecs = "brotli"
 [mangle]
 identifiers = true
 properties = true
-exports = false
-extern_fields = true
 pool_strings = true
+
+[delivery]
+mode = "single"
+directory = "."
+select = ["index"]
+entry_names = "to-html.esm.js"
+[delivery.entries]
+index = "src/index.lil"
+browser = "src/browser.lil"
+
+[[delivery.also]]
+name = "cjs"
+entries = ["index"]
+format = "cjs"
+entry_names = "to-html.cjs"
+
+[[delivery.also]]
+name = "browser"
+format = "iife"
+exports = "default"
+global = "toHtml"
+global_binding = "property"
+entry_names = "to-html.umd.js"
+entries = ["browser"]
