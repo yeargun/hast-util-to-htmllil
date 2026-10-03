@@ -1,0 +1,504 @@
+{
+  "version": 5,
+  "source_sha256": "80da09cf2a4422a1c604882fd28aa3c1b6abc1aef19ce7394a71292db4599118",
+  "inputs": {
+    "root": 0,
+    "entries": [
+      {
+        "name": "browser",
+        "module": 0
+      },
+      {
+        "name": "index",
+        "module": 1
+      }
+    ],
+    "modules": [
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/browser.lil",
+        "bytes": 64,
+        "sha256": "c0ac1747d180484417cb0a5c8054773b3c93ac2fe42ad0c7a7d88b36e6911afb",
+        "dependencies": [
+          1
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/index.lil",
+        "bytes": 164,
+        "sha256": "0fa477ec92851ed6e58e8a4cdfdefc64a0d326748ed2542487c47b5bd2fa45d8",
+        "dependencies": [
+          2
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/lib/index.lil",
+        "bytes": 2486,
+        "sha256": "26c55ae933415e3b0e0b1a3c677c1680224c6e9833ccab40460468e8f9248856",
+        "dependencies": [
+          3,
+          6
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/lib/handle/index.lil",
+        "bytes": 1257,
+        "sha256": "f8b1a787209af8672c29f01185dd99e6c575e4d4a2abc3a0479bb2b8aef1fb87",
+        "dependencies": [
+          4,
+          7,
+          8,
+          15,
+          17,
+          16,
+          6
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/lib/handle/comment.lil",
+        "bytes": 499,
+        "sha256": "4c1b705c415968848cd5d2e0c9e1a2403e81e75b19e6213c8b70a67320fb8079",
+        "dependencies": [
+          5,
+          6
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/lib/entities.lil",
+        "bytes": 5781,
+        "sha256": "da241d65eb99b3d8116c6ca6372d4708b633d93127e77897f8ec39e5e53eb886",
+        "dependencies": [
+          6
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/lib/types.lil",
+        "bytes": 6348,
+        "sha256": "00ef68aa24de78cca81260ca6c375673129e228f40763718bd0fdf2a946b857d",
+        "dependencies": [],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/lib/handle/doctype.lil",
+        "bytes": 339,
+        "sha256": "a18bff27907fecde3ffd44c6c1adbd2a6513e8e9f0356444aa6c7acc5547f501",
+        "dependencies": [
+          6
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/lib/handle/element.lil",
+        "bytes": 6032,
+        "sha256": "f3abf6c3c4bcbeead650d23b02a5e5b6b1b5ba7f5afe0c5848811ad00ddb1c9c",
+        "dependencies": [
+          2,
+          5,
+          9,
+          11,
+          14,
+          6
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/lib/schema.lil",
+        "bytes": 3621,
+        "sha256": "0df18e11024aafb9f6bc52eb6b35403299745fd8be29eed15865a0ea5ac67ce3",
+        "dependencies": [
+          10,
+          6
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/lib/schema-data.lil",
+        "bytes": 18501,
+        "sha256": "d8af02546e95f0422caa52f0905cb9fb4fe8bb5138c62ba29f1a16e1536f7ec3",
+        "dependencies": [],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/lib/omission/closing.lil",
+        "bytes": 4116,
+        "sha256": "3f6e927f30745ed944c537b23214544f6a4e8be90faed591cde4f23b9fbfcd70",
+        "dependencies": [
+          12,
+          13,
+          6
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/lib/omission/omission.lil",
+        "bytes": 513,
+        "sha256": "349a475265c135b94e6612b27bee5350c45518162fe86c84ae2555cd738de90f",
+        "dependencies": [],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/lib/omission/util/siblings.lil",
+        "bytes": 932,
+        "sha256": "f66f24cfed228c58d234253ded8ac3266d36ab866028083cbff806c1cdaa50fe",
+        "dependencies": [
+          6
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/lib/omission/opening.lil",
+        "bytes": 3550,
+        "sha256": "b0554c4639e81d743effc460c4e5b5504b96864cd493d583704452e8393be7da",
+        "dependencies": [
+          11,
+          12,
+          13,
+          6
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/lib/handle/raw.lil",
+        "bytes": 294,
+        "sha256": "68d551152ba36a178112cbf1f397b3e85243377611b6e35e35cd010de9bdc14f",
+        "dependencies": [
+          16,
+          6
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/lib/handle/text.lil",
+        "bytes": 567,
+        "sha256": "3aaabda981f5c88d0d107f90b76f0f314baf7f5320593049019b04c1ff41b100",
+        "dependencies": [
+          5,
+          6
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/hast-util-to-htmllil/src/lib/handle/root.lil",
+        "bytes": 181,
+        "sha256": "b2ec07dec13d0892da360201fb7ab15d868c6ffcdf9653cbe28e290da3cc9847",
+        "dependencies": [
+          2,
+          6
+        ],
+        "dynamic_dependencies": []
+      }
+    ],
+    "host_modules": [],
+    "host_reserved": []
+  },
+  "outputs": [
+    {
+      "mode": "single",
+      "format": "esm",
+      "entries": [
+        {
+          "name": "browser",
+          "file": "to-html.esm.js",
+          "dynamic": false,
+          "closure": [
+            "to-html.esm.js"
+          ],
+          "row": 8311,
+          "raw_row": 29209
+        }
+      ],
+      "files": [
+        {
+          "file": "to-html.esm.js",
+          "role": "entry",
+          "source_map_for": null,
+          "label": [
+            "browser"
+          ],
+          "modules": [
+            "browser.lil",
+            "index.lil",
+            "lib/index.lil",
+            "lib/handle/index.lil",
+            "lib/handle/comment.lil",
+            "lib/entities.lil",
+            "lib/types.lil",
+            "lib/handle/doctype.lil",
+            "lib/handle/element.lil",
+            "lib/schema.lil",
+            "lib/schema-data.lil",
+            "lib/omission/closing.lil",
+            "lib/omission/omission.lil",
+            "lib/omission/util/siblings.lil",
+            "lib/omission/opening.lil",
+            "lib/handle/raw.lil",
+            "lib/handle/text.lil",
+            "lib/handle/root.lil"
+          ],
+          "anchored": true,
+          "imports": [],
+          "dynamic_imports": [],
+          "bytes": 29209,
+          "codec_bytes": 8311,
+          "sha256": "b7a242f0ef68e76e47aa94d94102442e45a287b95e6bdd9492d3db2232e445e1"
+        }
+      ],
+      "side_effects": [
+        "to-html.esm.js"
+      ],
+      "codec_total": 8311,
+      "rows_total": 8311,
+      "setters": 0,
+      "output": "primary",
+      "codec": "brotli",
+      "codec_settings": {
+        "brotli": {
+          "quality": 11,
+          "window": 22,
+          "mode": "generic"
+        },
+        "gzip": {
+          "level": 9,
+          "window": 15
+        }
+      },
+      "policy_fingerprint": [
+        119,
+        41,
+        62,
+        17,
+        158,
+        38,
+        89,
+        106,
+        234,
+        52,
+        140,
+        244,
+        157,
+        72,
+        188,
+        147,
+        201,
+        162,
+        247,
+        117,
+        60,
+        197,
+        208,
+        184,
+        44,
+        2,
+        39,
+        167,
+        190,
+        168,
+        32,
+        176
+      ]
+    },
+    {
+      "mode": "single",
+      "format": "iife",
+      "entries": [
+        {
+          "name": "browser",
+          "file": "to-html.umd.js",
+          "dynamic": false,
+          "closure": [
+            "to-html.umd.js"
+          ],
+          "row": 8406,
+          "raw_row": 29432
+        }
+      ],
+      "files": [
+        {
+          "file": "to-html.umd.js",
+          "role": "entry",
+          "source_map_for": null,
+          "label": [
+            "browser"
+          ],
+          "modules": [
+            "index.lil",
+            "lib/index.lil",
+            "lib/handle/index.lil",
+            "lib/entities.lil",
+            "lib/types.lil",
+            "lib/handle/element.lil",
+            "lib/schema.lil",
+            "lib/schema-data.lil",
+            "lib/omission/closing.lil",
+            "lib/omission/util/siblings.lil",
+            "lib/omission/opening.lil",
+            "lib/handle/text.lil"
+          ],
+          "anchored": true,
+          "imports": [],
+          "dynamic_imports": [],
+          "bytes": 29432,
+          "codec_bytes": 8406,
+          "sha256": "90e94dad6593026b74bb1929f1164333297c055b0c15abb0b408f0d12ca605c9"
+        }
+      ],
+      "side_effects": [
+        "to-html.umd.js"
+      ],
+      "codec_total": 8406,
+      "rows_total": 8406,
+      "setters": 0,
+      "output": "browser",
+      "codec": "brotli",
+      "codec_settings": {
+        "brotli": {
+          "quality": 11,
+          "window": 22,
+          "mode": "generic"
+        },
+        "gzip": {
+          "level": 9,
+          "window": 15
+        }
+      },
+      "policy_fingerprint": [
+        74,
+        211,
+        111,
+        5,
+        44,
+        150,
+        62,
+        223,
+        118,
+        181,
+        64,
+        247,
+        224,
+        237,
+        168,
+        57,
+        196,
+        176,
+        182,
+        85,
+        192,
+        103,
+        117,
+        224,
+        230,
+        81,
+        120,
+        246,
+        79,
+        231,
+        217,
+        112
+      ]
+    },
+    {
+      "mode": "single",
+      "format": "cjs",
+      "entries": [
+        {
+          "name": "index",
+          "file": "to-html.cjs",
+          "dynamic": false,
+          "closure": [
+            "to-html.cjs"
+          ],
+          "row": 8298,
+          "raw_row": 29288
+        }
+      ],
+      "files": [
+        {
+          "file": "to-html.cjs",
+          "role": "entry",
+          "source_map_for": null,
+          "label": [
+            "index"
+          ],
+          "modules": [
+            "index.lil",
+            "lib/index.lil",
+            "lib/handle/index.lil",
+            "lib/entities.lil",
+            "lib/types.lil",
+            "lib/handle/element.lil",
+            "lib/schema.lil",
+            "lib/schema-data.lil",
+            "lib/omission/closing.lil",
+            "lib/omission/util/siblings.lil",
+            "lib/omission/opening.lil",
+            "lib/handle/text.lil"
+          ],
+          "anchored": true,
+          "imports": [],
+          "dynamic_imports": [],
+          "bytes": 29288,
+          "codec_bytes": 8298,
+          "sha256": "192a72b29098dc80bdb3cd87bb62ae9e95b01e12b51c1e5dec23421fd83c32ea"
+        }
+      ],
+      "side_effects": [
+        "to-html.cjs"
+      ],
+      "codec_total": 8298,
+      "rows_total": 8298,
+      "setters": 0,
+      "output": "cjs",
+      "codec": "brotli",
+      "codec_settings": {
+        "brotli": {
+          "quality": 11,
+          "window": 22,
+          "mode": "generic"
+        },
+        "gzip": {
+          "level": 9,
+          "window": 15
+        }
+      },
+      "policy_fingerprint": [
+        18,
+        181,
+        227,
+        154,
+        161,
+        171,
+        187,
+        225,
+        91,
+        89,
+        238,
+        96,
+        74,
+        219,
+        53,
+        231,
+        189,
+        238,
+        228,
+        121,
+        240,
+        22,
+        144,
+        55,
+        67,
+        71,
+        56,
+        131,
+        7,
+        252,
+        143,
+        72
+      ]
+    }
+  ]
+}

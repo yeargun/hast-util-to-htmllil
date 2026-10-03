@@ -1,0 +1,417 @@
+{
+  "version": 5,
+  "outputs": [
+    {
+      "mode": "single",
+      "format": "esm",
+      "entries": [
+        {
+          "name": "browser",
+          "file": "to-html.esm.js",
+          "dynamic": false,
+          "closure": [
+            "to-html.esm.js"
+          ],
+          "row": 8311,
+          "raw_row": 29209
+        }
+      ],
+      "files": [
+        {
+          "file": "to-html.esm.js",
+          "role": "entry",
+          "source_map_for": null,
+          "label": [
+            "browser"
+          ],
+          "modules": [
+            "browser.lil",
+            "index.lil",
+            "lib/index.lil",
+            "lib/handle/index.lil",
+            "lib/handle/comment.lil",
+            "lib/entities.lil",
+            "lib/types.lil",
+            "lib/handle/doctype.lil",
+            "lib/handle/element.lil",
+            "lib/schema.lil",
+            "lib/schema-data.lil",
+            "lib/omission/closing.lil",
+            "lib/omission/omission.lil",
+            "lib/omission/util/siblings.lil",
+            "lib/omission/opening.lil",
+            "lib/handle/raw.lil",
+            "lib/handle/text.lil",
+            "lib/handle/root.lil"
+          ],
+          "anchored": true,
+          "imports": [],
+          "dynamic_imports": [],
+          "bytes": 29209,
+          "codec_bytes": 8311,
+          "sha256": "b7a242f0ef68e76e47aa94d94102442e45a287b95e6bdd9492d3db2232e445e1"
+        }
+      ],
+      "side_effects": [
+        "to-html.esm.js"
+      ],
+      "codec_total": 8311,
+      "rows_total": 8311,
+      "setters": 0,
+      "output": "public/primary",
+      "codec": "brotli",
+      "codec_settings": {
+        "brotli": {
+          "quality": 11,
+          "window": 22,
+          "mode": "generic"
+        },
+        "gzip": {
+          "level": 9,
+          "window": 15
+        }
+      },
+      "policy_fingerprint": [
+        119,
+        41,
+        62,
+        17,
+        158,
+        38,
+        89,
+        106,
+        234,
+        52,
+        140,
+        244,
+        157,
+        72,
+        188,
+        147,
+        201,
+        162,
+        247,
+        117,
+        60,
+        197,
+        208,
+        184,
+        44,
+        2,
+        39,
+        167,
+        190,
+        168,
+        32,
+        176
+      ]
+    },
+    {
+      "mode": "single",
+      "format": "iife",
+      "entries": [
+        {
+          "name": "browser",
+          "file": "to-html.umd.js",
+          "dynamic": false,
+          "closure": [
+            "to-html.umd.js"
+          ],
+          "row": 8406,
+          "raw_row": 29432
+        }
+      ],
+      "files": [
+        {
+          "file": "to-html.umd.js",
+          "role": "entry",
+          "source_map_for": null,
+          "label": [
+            "browser"
+          ],
+          "modules": [
+            "index.lil",
+            "lib/index.lil",
+            "lib/handle/index.lil",
+            "lib/entities.lil",
+            "lib/types.lil",
+            "lib/handle/element.lil",
+            "lib/schema.lil",
+            "lib/schema-data.lil",
+            "lib/omission/closing.lil",
+            "lib/omission/util/siblings.lil",
+            "lib/omission/opening.lil",
+            "lib/handle/text.lil"
+          ],
+          "anchored": true,
+          "imports": [],
+          "dynamic_imports": [],
+          "bytes": 29432,
+          "codec_bytes": 8406,
+          "sha256": "90e94dad6593026b74bb1929f1164333297c055b0c15abb0b408f0d12ca605c9"
+        }
+      ],
+      "side_effects": [
+        "to-html.umd.js"
+      ],
+      "codec_total": 8406,
+      "rows_total": 8406,
+      "setters": 0,
+      "output": "public/browser",
+      "codec": "brotli",
+      "codec_settings": {
+        "brotli": {
+          "quality": 11,
+          "window": 22,
+          "mode": "generic"
+        },
+        "gzip": {
+          "level": 9,
+          "window": 15
+        }
+      },
+      "policy_fingerprint": [
+        74,
+        211,
+        111,
+        5,
+        44,
+        150,
+        62,
+        223,
+        118,
+        181,
+        64,
+        247,
+        224,
+        237,
+        168,
+        57,
+        196,
+        176,
+        182,
+        85,
+        192,
+        103,
+        117,
+        224,
+        230,
+        81,
+        120,
+        246,
+        79,
+        231,
+        217,
+        112
+      ]
+    },
+    {
+      "mode": "single",
+      "format": "cjs",
+      "entries": [
+        {
+          "name": "index",
+          "file": "to-html.cjs",
+          "dynamic": false,
+          "closure": [
+            "to-html.cjs"
+          ],
+          "row": 8298,
+          "raw_row": 29288
+        }
+      ],
+      "files": [
+        {
+          "file": "to-html.cjs",
+          "role": "entry",
+          "source_map_for": null,
+          "label": [
+            "index"
+          ],
+          "modules": [
+            "index.lil",
+            "lib/index.lil",
+            "lib/handle/index.lil",
+            "lib/entities.lil",
+            "lib/types.lil",
+            "lib/handle/element.lil",
+            "lib/schema.lil",
+            "lib/schema-data.lil",
+            "lib/omission/closing.lil",
+            "lib/omission/util/siblings.lil",
+            "lib/omission/opening.lil",
+            "lib/handle/text.lil"
+          ],
+          "anchored": true,
+          "imports": [],
+          "dynamic_imports": [],
+          "bytes": 29288,
+          "codec_bytes": 8298,
+          "sha256": "192a72b29098dc80bdb3cd87bb62ae9e95b01e12b51c1e5dec23421fd83c32ea"
+        }
+      ],
+      "side_effects": [
+        "to-html.cjs"
+      ],
+      "codec_total": 8298,
+      "rows_total": 8298,
+      "setters": 0,
+      "output": "public/cjs",
+      "codec": "brotli",
+      "codec_settings": {
+        "brotli": {
+          "quality": 11,
+          "window": 22,
+          "mode": "generic"
+        },
+        "gzip": {
+          "level": 9,
+          "window": 15
+        }
+      },
+      "policy_fingerprint": [
+        18,
+        181,
+        227,
+        154,
+        161,
+        171,
+        187,
+        225,
+        91,
+        89,
+        238,
+        96,
+        74,
+        219,
+        53,
+        231,
+        189,
+        238,
+        228,
+        121,
+        240,
+        22,
+        144,
+        55,
+        67,
+        71,
+        56,
+        131,
+        7,
+        252,
+        143,
+        72
+      ]
+    },
+    {
+      "mode": "single",
+      "format": "esm",
+      "entries": [
+        {
+          "name": "index",
+          "file": "to-html.closed.js",
+          "dynamic": false,
+          "closure": [
+            "to-html.closed.js"
+          ],
+          "row": 8311,
+          "raw_row": 29209
+        }
+      ],
+      "files": [
+        {
+          "file": "to-html.closed.js",
+          "role": "entry",
+          "source_map_for": null,
+          "label": [
+            "index"
+          ],
+          "modules": [
+            "index.lil",
+            "lib/index.lil",
+            "lib/handle/index.lil",
+            "lib/handle/comment.lil",
+            "lib/entities.lil",
+            "lib/types.lil",
+            "lib/handle/doctype.lil",
+            "lib/handle/element.lil",
+            "lib/schema.lil",
+            "lib/schema-data.lil",
+            "lib/omission/closing.lil",
+            "lib/omission/omission.lil",
+            "lib/omission/util/siblings.lil",
+            "lib/omission/opening.lil",
+            "lib/handle/raw.lil",
+            "lib/handle/text.lil",
+            "lib/handle/root.lil"
+          ],
+          "anchored": true,
+          "imports": [],
+          "dynamic_imports": [],
+          "bytes": 29209,
+          "codec_bytes": 8311,
+          "sha256": "b7a242f0ef68e76e47aa94d94102442e45a287b95e6bdd9492d3db2232e445e1"
+        }
+      ],
+      "side_effects": [
+        "to-html.closed.js"
+      ],
+      "codec_total": 8311,
+      "rows_total": 8311,
+      "setters": 0,
+      "output": "closed/primary",
+      "codec": "brotli",
+      "codec_settings": {
+        "brotli": {
+          "quality": 11,
+          "window": 22,
+          "mode": "generic"
+        },
+        "gzip": {
+          "level": 9,
+          "window": 15
+        }
+      },
+      "policy_fingerprint": [
+        235,
+        166,
+        240,
+        177,
+        168,
+        181,
+        253,
+        127,
+        146,
+        182,
+        68,
+        102,
+        187,
+        202,
+        234,
+        223,
+        219,
+        108,
+        221,
+        185,
+        28,
+        74,
+        54,
+        5,
+        64,
+        52,
+        25,
+        215,
+        153,
+        33,
+        192,
+        162
+      ]
+    }
+  ],
+  "aliases": {
+    "to-html.raw.js": "to-html.esm.js"
+  },
+  "providers": [],
+  "source_sha256": "409bdc8f724101711534c3762d5954bd2109cb118a8ab185bcd2dc25bd2974a5"
+}

@@ -49,15 +49,21 @@
     "NOTICE.md",
     "README.md"
   ],
-  "sideEffects": false,
+  "sideEffects": [
+    "./dist/to-html.cjs",
+    "./dist/to-html.closed.js",
+    "./dist/to-html.esm.js",
+    "./dist/to-html.raw.js",
+    "./dist/to-html.umd.js"
+  ],
   "engines": {
     "node": ">=18"
   },
   "scripts": {
     "build": "node scripts/build.mjs --compile",
     "build:site": "node scripts/build-site.mjs",
-    "test": "node --test test/*.test.mjs test/official/index.js",
-    "check:site": "npm run build:site && node --test test/site.test.mjs",
+    "test": "node --test-concurrency=1 --test test/*.test.mjs test/official/index.js",
+    "check:site": "npm run build:site && node --test-concurrency=1 --test test/site.test.mjs",
     "check:pack": "node scripts/check-pack.mjs",
     "prepublishOnly": "npm test && npm run check:pack && npm run check:site"
   },
