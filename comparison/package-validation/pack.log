@@ -1,0 +1,5 @@
+
+> @itslil/hast-util-to-html@9.0.7 check:pack
+> node scripts/check-pack.mjs
+
+npm pack: 27 files, 29979 bytes packed, 178072 bytes unpacked

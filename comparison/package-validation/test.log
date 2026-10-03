@@ -1,0 +1,2372 @@
+TAP version 13
+# Subtest: characterReferences
+    # Subtest: matches 9.0.5 for flags 0, context 0, unquoted false
+    ok 1 - matches 9.0.5 for flags 0, context 0, unquoted false
+      ---
+      duration_ms: 2.263622
+      ...
+    # Subtest: matches 9.0.5 for flags 0, context 0, unquoted true
+    ok 2 - matches 9.0.5 for flags 0, context 0, unquoted true
+      ---
+      duration_ms: 0.209072
+      ...
+    # Subtest: matches 9.0.5 for flags 0, context 1, unquoted false
+    ok 3 - matches 9.0.5 for flags 0, context 1, unquoted false
+      ---
+      duration_ms: 0.463137
+      ...
+    # Subtest: matches 9.0.5 for flags 0, context 1, unquoted true
+    ok 4 - matches 9.0.5 for flags 0, context 1, unquoted true
+      ---
+      duration_ms: 0.172884
+      ...
+    # Subtest: matches 9.0.5 for flags 0, context 2, unquoted false
+    ok 5 - matches 9.0.5 for flags 0, context 2, unquoted false
+      ---
+      duration_ms: 0.674504
+      ...
+    # Subtest: matches 9.0.5 for flags 0, context 2, unquoted true
+    ok 6 - matches 9.0.5 for flags 0, context 2, unquoted true
+      ---
+      duration_ms: 0.136686
+      ...
+    # Subtest: matches 9.0.5 for flags 0, context 3, unquoted false
+    ok 7 - matches 9.0.5 for flags 0, context 3, unquoted false
+      ---
+      duration_ms: 2.600743
+      ...
+    # Subtest: matches 9.0.5 for flags 0, context 3, unquoted true
+    ok 8 - matches 9.0.5 for flags 0, context 3, unquoted true
+      ---
+      duration_ms: 0.33138
+      ...
+    # Subtest: matches 9.0.5 for flags 1, context 0, unquoted false
+    ok 9 - matches 9.0.5 for flags 1, context 0, unquoted false
+      ---
+      duration_ms: 0.384901
+      ...
+    # Subtest: matches 9.0.5 for flags 1, context 0, unquoted true
+    ok 10 - matches 9.0.5 for flags 1, context 0, unquoted true
+      ---
+      duration_ms: 0.374983
+      ...
+    # Subtest: matches 9.0.5 for flags 1, context 1, unquoted false
+    ok 11 - matches 9.0.5 for flags 1, context 1, unquoted false
+      ---
+      duration_ms: 0.214092
+      ...
+    # Subtest: matches 9.0.5 for flags 1, context 1, unquoted true
+    ok 12 - matches 9.0.5 for flags 1, context 1, unquoted true
+      ---
+      duration_ms: 0.219691
+      ...
+    # Subtest: matches 9.0.5 for flags 1, context 2, unquoted false
+    ok 13 - matches 9.0.5 for flags 1, context 2, unquoted false
+      ---
+      duration_ms: 0.212198
+      ...
+    # Subtest: matches 9.0.5 for flags 1, context 2, unquoted true
+    ok 14 - matches 9.0.5 for flags 1, context 2, unquoted true
+      ---
+      duration_ms: 0.275176
+      ...
+    # Subtest: matches 9.0.5 for flags 1, context 3, unquoted false
+    ok 15 - matches 9.0.5 for flags 1, context 3, unquoted false
+      ---
+      duration_ms: 0.289121
+      ...
+    # Subtest: matches 9.0.5 for flags 1, context 3, unquoted true
+    ok 16 - matches 9.0.5 for flags 1, context 3, unquoted true
+      ---
+      duration_ms: 0.236904
+      ...
+    # Subtest: matches 9.0.5 for flags 2, context 0, unquoted false
+    ok 17 - matches 9.0.5 for flags 2, context 0, unquoted false
+      ---
+      duration_ms: 0.204653
+      ...
+    # Subtest: matches 9.0.5 for flags 2, context 0, unquoted true
+    ok 18 - matches 9.0.5 for flags 2, context 0, unquoted true
+      ---
+      duration_ms: 0.30422
+      ...
+    # Subtest: matches 9.0.5 for flags 2, context 1, unquoted false
+    ok 19 - matches 9.0.5 for flags 2, context 1, unquoted false
+      ---
+      duration_ms: 0.248055
+      ...
+    # Subtest: matches 9.0.5 for flags 2, context 1, unquoted true
+    ok 20 - matches 9.0.5 for flags 2, context 1, unquoted true
+      ---
+      duration_ms: 0.208081
+      ...
+    # Subtest: matches 9.0.5 for flags 2, context 2, unquoted false
+    ok 21 - matches 9.0.5 for flags 2, context 2, unquoted false
+      ---
+      duration_ms: 0.121697
+      ...
+    # Subtest: matches 9.0.5 for flags 2, context 2, unquoted true
+    ok 22 - matches 9.0.5 for flags 2, context 2, unquoted true
+      ---
+      duration_ms: 0.115406
+      ...
+    # Subtest: matches 9.0.5 for flags 2, context 3, unquoted false
+    ok 23 - matches 9.0.5 for flags 2, context 3, unquoted false
+      ---
+      duration_ms: 0.180859
+      ...
+    # Subtest: matches 9.0.5 for flags 2, context 3, unquoted true
+    ok 24 - matches 9.0.5 for flags 2, context 3, unquoted true
+      ---
+      duration_ms: 0.250779
+      ...
+    # Subtest: matches 9.0.5 for flags 3, context 0, unquoted false
+    ok 25 - matches 9.0.5 for flags 3, context 0, unquoted false
+      ---
+      duration_ms: 0.114866
+      ...
+    # Subtest: matches 9.0.5 for flags 3, context 0, unquoted true
+    ok 26 - matches 9.0.5 for flags 3, context 0, unquoted true
+      ---
+      duration_ms: 0.113253
+      ...
+    # Subtest: matches 9.0.5 for flags 3, context 1, unquoted false
+    ok 27 - matches 9.0.5 for flags 3, context 1, unquoted false
+      ---
+      duration_ms: 0.119524
+      ...
+    # Subtest: matches 9.0.5 for flags 3, context 1, unquoted true
+    ok 28 - matches 9.0.5 for flags 3, context 1, unquoted true
+      ---
+      duration_ms: 0.17607
+      ...
+    # Subtest: matches 9.0.5 for flags 3, context 2, unquoted false
+    ok 29 - matches 9.0.5 for flags 3, context 2, unquoted false
+      ---
+      duration_ms: 0.141695
+      ...
+    # Subtest: matches 9.0.5 for flags 3, context 2, unquoted true
+    ok 30 - matches 9.0.5 for flags 3, context 2, unquoted true
+      ---
+      duration_ms: 0.108493
+      ...
+    # Subtest: matches 9.0.5 for flags 3, context 3, unquoted false
+    ok 31 - matches 9.0.5 for flags 3, context 3, unquoted false
+      ---
+      duration_ms: 0.228288
+      ...
+    # Subtest: matches 9.0.5 for flags 3, context 3, unquoted true
+    ok 32 - matches 9.0.5 for flags 3, context 3, unquoted true
+      ---
+      duration_ms: 0.282589
+      ...
+    # Subtest: matches 9.0.5 for flags 4, context 0, unquoted false
+    ok 33 - matches 9.0.5 for flags 4, context 0, unquoted false
+      ---
+      duration_ms: 0.194223
+      ...
+    # Subtest: matches 9.0.5 for flags 4, context 0, unquoted true
+    ok 34 - matches 9.0.5 for flags 4, context 0, unquoted true
+      ---
+      duration_ms: 0.211086
+      ...
+    # Subtest: matches 9.0.5 for flags 4, context 1, unquoted false
+    ok 35 - matches 9.0.5 for flags 4, context 1, unquoted false
+      ---
+      duration_ms: 0.203522
+      ...
+    # Subtest: matches 9.0.5 for flags 4, context 1, unquoted true
+    ok 36 - matches 9.0.5 for flags 4, context 1, unquoted true
+      ---
+      duration_ms: 0.124153
+      ...
+    # Subtest: matches 9.0.5 for flags 4, context 2, unquoted false
+    ok 37 - matches 9.0.5 for flags 4, context 2, unquoted false
+      ---
+      duration_ms: 0.116869
+      ...
+    # Subtest: matches 9.0.5 for flags 4, context 2, unquoted true
+    ok 38 - matches 9.0.5 for flags 4, context 2, unquoted true
+      ---
+      duration_ms: 0.092483
+      ...
+    # Subtest: matches 9.0.5 for flags 4, context 3, unquoted false
+    ok 39 - matches 9.0.5 for flags 4, context 3, unquoted false
+      ---
+      duration_ms: 0.261289
+      ...
+    # Subtest: matches 9.0.5 for flags 4, context 3, unquoted true
+    ok 40 - matches 9.0.5 for flags 4, context 3, unquoted true
+      ---
+      duration_ms: 0.238877
+      ...
+    # Subtest: matches 9.0.5 for flags 5, context 0, unquoted false
+    ok 41 - matches 9.0.5 for flags 5, context 0, unquoted false
+      ---
+      duration_ms: 0.813495
+      ...
+    # Subtest: matches 9.0.5 for flags 5, context 0, unquoted true
+    ok 42 - matches 9.0.5 for flags 5, context 0, unquoted true
+      ---
+      duration_ms: 0.146845
+      ...
+    # Subtest: matches 9.0.5 for flags 5, context 1, unquoted false
+    ok 43 - matches 9.0.5 for flags 5, context 1, unquoted false
+      ---
+      duration_ms: 0.103003
+      ...
+    # Subtest: matches 9.0.5 for flags 5, context 1, unquoted true
+    ok 44 - matches 9.0.5 for flags 5, context 1, unquoted true
+      ---
+      duration_ms: 0.093455
+      ...
+    # Subtest: matches 9.0.5 for flags 5, context 2, unquoted false
+    ok 45 - matches 9.0.5 for flags 5, context 2, unquoted false
+      ---
+      duration_ms: 0.090911
+      ...
+    # Subtest: matches 9.0.5 for flags 5, context 2, unquoted true
+    ok 46 - matches 9.0.5 for flags 5, context 2, unquoted true
+      ---
+      duration_ms: 0.079328
+      ...
+    # Subtest: matches 9.0.5 for flags 5, context 3, unquoted false
+    ok 47 - matches 9.0.5 for flags 5, context 3, unquoted false
+      ---
+      duration_ms: 0.222367
+      ...
+    # Subtest: matches 9.0.5 for flags 5, context 3, unquoted true
+    ok 48 - matches 9.0.5 for flags 5, context 3, unquoted true
+      ---
+      duration_ms: 0.158217
+      ...
+    # Subtest: matches 9.0.5 for flags 6, context 0, unquoted false
+    ok 49 - matches 9.0.5 for flags 6, context 0, unquoted false
+      ---
+      duration_ms: 0.150031
+      ...
+    # Subtest: matches 9.0.5 for flags 6, context 0, unquoted true
+    ok 50 - matches 9.0.5 for flags 6, context 0, unquoted true
+      ---
+      duration_ms: 0.103914
+      ...
+    # Subtest: matches 9.0.5 for flags 6, context 1, unquoted false
+    ok 51 - matches 9.0.5 for flags 6, context 1, unquoted false
+      ---
+      duration_ms: 0.093366
+      ...
+    # Subtest: matches 9.0.5 for flags 6, context 1, unquoted true
+    ok 52 - matches 9.0.5 for flags 6, context 1, unquoted true
+      ---
+      duration_ms: 0.089949
+      ...
+    # Subtest: matches 9.0.5 for flags 6, context 2, unquoted false
+    ok 53 - matches 9.0.5 for flags 6, context 2, unquoted false
+      ---
+      duration_ms: 0.08004
+      ...
+    # Subtest: matches 9.0.5 for flags 6, context 2, unquoted true
+    ok 54 - matches 9.0.5 for flags 6, context 2, unquoted true
+      ---
+      duration_ms: 0.11182
+      ...
+    # Subtest: matches 9.0.5 for flags 6, context 3, unquoted false
+    ok 55 - matches 9.0.5 for flags 6, context 3, unquoted false
+      ---
+      duration_ms: 0.193233
+      ...
+    # Subtest: matches 9.0.5 for flags 6, context 3, unquoted true
+    ok 56 - matches 9.0.5 for flags 6, context 3, unquoted true
+      ---
+      duration_ms: 0.163817
+      ...
+    # Subtest: matches 9.0.5 for flags 7, context 0, unquoted false
+    ok 57 - matches 9.0.5 for flags 7, context 0, unquoted false
+      ---
+      duration_ms: 0.09622
+      ...
+    # Subtest: matches 9.0.5 for flags 7, context 0, unquoted true
+    ok 58 - matches 9.0.5 for flags 7, context 0, unquoted true
+      ---
+      duration_ms: 0.147106
+      ...
+    # Subtest: matches 9.0.5 for flags 7, context 1, unquoted false
+    ok 59 - matches 9.0.5 for flags 7, context 1, unquoted false
+      ---
+      duration_ms: 0.118422
+      ...
+    # Subtest: matches 9.0.5 for flags 7, context 1, unquoted true
+    ok 60 - matches 9.0.5 for flags 7, context 1, unquoted true
+      ---
+      duration_ms: 0.113353
+      ...
+    # Subtest: matches 9.0.5 for flags 7, context 2, unquoted false
+    ok 61 - matches 9.0.5 for flags 7, context 2, unquoted false
+      ---
+      duration_ms: 0.077615
+      ...
+    # Subtest: matches 9.0.5 for flags 7, context 2, unquoted true
+    ok 62 - matches 9.0.5 for flags 7, context 2, unquoted true
+      ---
+      duration_ms: 0.070282
+      ...
+    # Subtest: matches 9.0.5 for flags 7, context 3, unquoted false
+    ok 63 - matches 9.0.5 for flags 7, context 3, unquoted false
+      ---
+      duration_ms: 0.20271
+      ...
+    # Subtest: matches 9.0.5 for flags 7, context 3, unquoted true
+    ok 64 - matches 9.0.5 for flags 7, context 3, unquoted true
+      ---
+      duration_ms: 0.163206
+      ...
+    # Subtest: handles reference termination at string boundaries
+    ok 65 - handles reference termination at string boundaries
+      ---
+      duration_ms: 1.330373
+      ...
+    # Subtest: ignores inherited character-reference settings
+    ok 66 - ignores inherited character-reference settings
+      ---
+      duration_ms: 0.174887
+      ...
+    # Subtest: matches option and nested proxy evaluation order
+    ok 67 - matches option and nested proxy evaluation order
+      ---
+      duration_ms: 0.898864
+      ...
+    1..67
+ok 1 - characterReferences
+  ---
+  duration_ms: 22.631605
+  type: 'suite'
+  ...
+# Subtest: `element` attributes
+    # Subtest: should support unknown properties
+        # Subtest: should ignore unknowns set to `false`
+        ok 1 - should ignore unknowns set to `false`
+          ---
+          duration_ms: 3.216427
+          ...
+        # Subtest: should ignore unknowns set to `null`
+        ok 2 - should ignore unknowns set to `null`
+          ---
+          duration_ms: 0.187131
+          ...
+        # Subtest: should ignore unknowns set to `undefined`
+        ok 3 - should ignore unknowns set to `undefined`
+          ---
+          duration_ms: 0.19165
+          ...
+        # Subtest: should ignore unknowns set to `NaN`
+        ok 4 - should ignore unknowns set to `NaN`
+          ---
+          duration_ms: 0.199764
+          ...
+        # Subtest: should serialize unknowns set to `true` without value
+        ok 5 - should serialize unknowns set to `true` without value
+          ---
+          duration_ms: 0.295854
+          ...
+        # Subtest: should serialize unknowns set to their name as their name
+        ok 6 - should serialize unknowns set to their name as their name
+          ---
+          duration_ms: 0.216166
+          ...
+        # Subtest: should serialize unknown lists as space-separated
+        ok 7 - should serialize unknown lists as space-separated
+          ---
+          duration_ms: 0.28316
+          ...
+        # Subtest: should serialize unknowns set to an integer as it’s string version
+        ok 8 - should serialize unknowns set to an integer as it’s string version
+          ---
+          duration_ms: 0.249578
+          ...
+        # Subtest: should serialize unknowns set to `0`
+        ok 9 - should serialize unknowns set to `0`
+          ---
+          duration_ms: 0.190527
+          ...
+        # Subtest: should serialize unknowns set to objects
+        ok 10 - should serialize unknowns set to objects
+          ---
+          duration_ms: 0.31489
+          ...
+        1..10
+    ok 1 - should support unknown properties
+      ---
+      duration_ms: 7.197195
+      ...
+    # Subtest: shold support known booleans
+        # Subtest: should ignore known booleans set to `false`
+        ok 1 - should ignore known booleans set to `false`
+          ---
+          duration_ms: 0.21838
+          ...
+        # Subtest: should ignore falsey known booleans
+        ok 2 - should ignore falsey known booleans
+          ---
+          duration_ms: 0.265047
+          ...
+        # Subtest: should ignore NaN known booleans
+        ok 3 - should ignore NaN known booleans
+          ---
+          duration_ms: 0.23489
+          ...
+        # Subtest: should serialize known booleans set to `true` without value
+        ok 4 - should serialize known booleans set to `true` without value
+          ---
+          duration_ms: 0.191299
+          ...
+        # Subtest: should serialize known booleans set to their name without value
+        ok 5 - should serialize known booleans set to their name without value
+          ---
+          duration_ms: 0.245911
+          ...
+        # Subtest: should serialize truthy known booleans without value
+        ok 6 - should serialize truthy known booleans without value
+          ---
+          duration_ms: 0.315041
+          ...
+        # Subtest: should serialize known booleans set to arbitrary strings with value
+        ok 7 - should serialize known booleans set to arbitrary strings with value
+          ---
+          duration_ms: 0.62413
+          ...
+        # Subtest: should serialize known booleans set to an empty string without value
+        ok 8 - should serialize known booleans set to an empty string without value
+          ---
+          duration_ms: 0.212287
+          ...
+        # Subtest: should serialize known overloaded booleans set to arbitrary strings with value
+        ok 9 - should serialize known overloaded booleans set to arbitrary strings with value
+          ---
+          duration_ms: 0.187992
+          ...
+        1..9
+    ok 2 - shold support known booleans
+      ---
+      duration_ms: 3.544661
+      ...
+    # Subtest: should support known overloaded booleans
+        # Subtest: should ignore known overloaded booleans set to `false`
+        ok 1 - should ignore known overloaded booleans set to `false`
+          ---
+          duration_ms: 0.164669
+          ...
+        # Subtest: should ignore falsey known overloaded booleans
+        ok 2 - should ignore falsey known overloaded booleans
+          ---
+          duration_ms: 0.164449
+          ...
+        # Subtest: should ignore NaN known overloaded booleans
+        ok 3 - should ignore NaN known overloaded booleans
+          ---
+          duration_ms: 0.139131
+          ...
+        # Subtest: should serialize known overloaded booleans set to `true` without value
+        ok 4 - should serialize known overloaded booleans set to `true` without value
+          ---
+          duration_ms: 0.141705
+          ...
+        # Subtest: should serialize known overloaded booleans set to their name without value
+        ok 5 - should serialize known overloaded booleans set to their name without value
+          ---
+          duration_ms: 0.130765
+          ...
+        # Subtest: should serialize known overloaded booleans set to an empty string without value
+        ok 6 - should serialize known overloaded booleans set to an empty string without value
+          ---
+          duration_ms: 0.130835
+          ...
+        # Subtest: should serialize truthy known overloaded booleans without value
+        ok 7 - should serialize truthy known overloaded booleans without value
+          ---
+          duration_ms: 0.157426
+          ...
+        # Subtest: should serialize known overloaded booleans set to another string
+        ok 8 - should serialize known overloaded booleans set to another string
+          ---
+          duration_ms: 0.1385
+          ...
+        1..8
+    ok 3 - should support known overloaded booleans
+      ---
+      duration_ms: 1.832113
+      ...
+    # Subtest: should support known numbers
+        # Subtest: should ignore known numbers set to `false`
+        ok 1 - should ignore known numbers set to `false`
+          ---
+          duration_ms: 0.15475
+          ...
+        # Subtest: should ignore NaN known numbers
+        ok 2 - should ignore NaN known numbers
+          ---
+          duration_ms: 0.21334
+          ...
+        # Subtest: should serialize known numbers set to `0`
+        ok 3 - should serialize known numbers set to `0`
+          ---
+          duration_ms: 0.205826
+          ...
+        # Subtest: should serialize known numbers set to `-1`
+        ok 4 - should serialize known numbers set to `-1`
+          ---
+          duration_ms: 0.175579
+          ...
+        # Subtest: should serialize known numbers set to `1`
+        ok 5 - should serialize known numbers set to `1`
+          ---
+          duration_ms: 0.135634
+          ...
+        # Subtest: should serialize known numbers set to `Math.PI`
+        ok 6 - should serialize known numbers set to `Math.PI`
+          ---
+          duration_ms: 0.168155
+          ...
+        # Subtest: should serialize known numbers set to `true` as without value
+        ok 7 - should serialize known numbers set to `true` as without value
+          ---
+          duration_ms: 0.133059
+          ...
+        # Subtest: should serialize known numbers set to an empty string
+        ok 8 - should serialize known numbers set to an empty string
+          ---
+          duration_ms: 0.136987
+          ...
+        # Subtest: should serialize known numbers set to their name
+        ok 9 - should serialize known numbers set to their name
+          ---
+          duration_ms: 0.129342
+          ...
+        # Subtest: should serialize known numbers set to a string
+        ok 10 - should serialize known numbers set to a string
+          ---
+          duration_ms: 0.128972
+          ...
+        # Subtest: should serialize known numbers set to an object
+        ok 11 - should serialize known numbers set to an object
+          ---
+          duration_ms: 0.141916
+          ...
+        # Subtest: should serialize known numbers set to an array of strings
+        ok 12 - should serialize known numbers set to an array of strings
+          ---
+          duration_ms: 0.211957
+          ...
+        # Subtest: should serialize known numbers set to an array of numbers
+        ok 13 - should serialize known numbers set to an array of numbers
+          ---
+          duration_ms: 0.140524
+          ...
+        # Subtest: should serialize known numbers set to an array of booleans
+        ok 14 - should serialize known numbers set to an array of booleans
+          ---
+          duration_ms: 0.168977
+          ...
+        1..14
+    ok 4 - should support known numbers
+      ---
+      duration_ms: 3.279686
+      ...
+    # Subtest: should support known space-separated lists
+        # Subtest: should ignore known space-separated lists set to `false`
+        ok 1 - should ignore known space-separated lists set to `false`
+          ---
+          duration_ms: 0.177282
+          ...
+        # Subtest: should ignore NaN known space-separated lists
+        ok 2 - should ignore NaN known space-separated lists
+          ---
+          duration_ms: 0.131115
+          ...
+        # Subtest: should serialize known space-separated lists set to `0`
+        ok 3 - should serialize known space-separated lists set to `0`
+          ---
+          duration_ms: 0.189526
+          ...
+        # Subtest: should serialize known space-separated lists set to `true` as without value
+        ok 4 - should serialize known space-separated lists set to `true` as without value
+          ---
+          duration_ms: 0.152967
+          ...
+        # Subtest: should serialize known space-separated lists set to an empty string
+        ok 5 - should serialize known space-separated lists set to an empty string
+          ---
+          duration_ms: 0.147086
+          ...
+        # Subtest: should serialize known space-separated lists set to their attribute name
+        ok 6 - should serialize known space-separated lists set to their attribute name
+          ---
+          duration_ms: 0.141164
+          ...
+        # Subtest: should serialize known space-separated lists set to their property name
+        ok 7 - should serialize known space-separated lists set to their property name
+          ---
+          duration_ms: 0.183073
+          ...
+        # Subtest: should serialize known space-separated lists set to a string
+        ok 8 - should serialize known space-separated lists set to a string
+          ---
+          duration_ms: 0.143609
+          ...
+        # Subtest: should serialize known space-separated lists set to an object
+        ok 9 - should serialize known space-separated lists set to an object
+          ---
+          duration_ms: 0.184716
+          ...
+        # Subtest: should serialize known space-separated lists set to an array of strings
+        ok 10 - should serialize known space-separated lists set to an array of strings
+          ---
+          duration_ms: 0.161323
+          ...
+        # Subtest: should serialize known space-separated lists set to an array of numbers
+        ok 11 - should serialize known space-separated lists set to an array of numbers
+          ---
+          duration_ms: 0.216475
+          ...
+        # Subtest: should serialize known space-separated lists set to an array of booleans
+        ok 12 - should serialize known space-separated lists set to an array of booleans
+          ---
+          duration_ms: 0.130765
+          ...
+        1..12
+    ok 5 - should support known space-separated lists
+      ---
+      duration_ms: 2.87125
+      ...
+    # Subtest: should support known comma-separated lists
+        # Subtest: should ignore known comma-separated lists set to `false`
+        ok 1 - should ignore known comma-separated lists set to `false`
+          ---
+          duration_ms: 0.230011
+          ...
+        # Subtest: should ignore NaN known comma-separated lists
+        ok 2 - should ignore NaN known comma-separated lists
+          ---
+          duration_ms: 0.129462
+          ...
+        # Subtest: should serialize known comma-separated lists set to `0`
+        ok 3 - should serialize known comma-separated lists set to `0`
+          ---
+          duration_ms: 0.128341
+          ...
+        # Subtest: should serialize known comma-separated lists set to `true` as without value
+        ok 4 - should serialize known comma-separated lists set to `true` as without value
+          ---
+          duration_ms: 0.152526
+          ...
+        # Subtest: should serialize known comma-separated lists set to an empty string
+        ok 5 - should serialize known comma-separated lists set to an empty string
+          ---
+          duration_ms: 0.195576
+          ...
+        # Subtest: should serialize known comma-separated lists set to their name
+        ok 6 - should serialize known comma-separated lists set to their name
+          ---
+          duration_ms: 0.127228
+          ...
+        # Subtest: should serialize known comma-separated lists set to a string
+        ok 7 - should serialize known comma-separated lists set to a string
+          ---
+          duration_ms: 0.119684
+          ...
+        # Subtest: should serialize known comma-separated lists set to an object
+        ok 8 - should serialize known comma-separated lists set to an object
+          ---
+          duration_ms: 0.120796
+          ...
+        # Subtest: should serialize known comma-separated lists set to an array of strings
+        ok 9 - should serialize known comma-separated lists set to an array of strings
+          ---
+          duration_ms: 0.143399
+          ...
+        # Subtest: should serialize known comma-separated lists set to an array of numbers
+        ok 10 - should serialize known comma-separated lists set to an array of numbers
+          ---
+          duration_ms: 0.120947
+          ...
+        # Subtest: should serialize known comma-separated lists set to an array of booleans
+        ok 11 - should serialize known comma-separated lists set to an array of booleans
+          ---
+          duration_ms: 0.219631
+          ...
+        1..11
+    ok 6 - should support known comma-separated lists
+      ---
+      duration_ms: 2.537464
+      ...
+    # Subtest: should support known normals
+        # Subtest: should ignore known normals set to `false`
+        ok 1 - should ignore known normals set to `false`
+          ---
+          duration_ms: 0.179006
+          ...
+        # Subtest: should ignore NaN known normals
+        ok 2 - should ignore NaN known normals
+          ---
+          duration_ms: 0.128592
+          ...
+        # Subtest: should serialize known normals set to `0`
+        ok 3 - should serialize known normals set to `0`
+          ---
+          duration_ms: 0.120936
+          ...
+        # Subtest: should serialize known normals set to `true` as without value
+        ok 4 - should serialize known normals set to `true` as without value
+          ---
+          duration_ms: 0.143328
+          ...
+        # Subtest: should serialize known normals set to an empty string
+        ok 5 - should serialize known normals set to an empty string
+          ---
+          duration_ms: 0.148278
+          ...
+        # Subtest: should serialize known normals set to their name
+        ok 6 - should serialize known normals set to their name
+          ---
+          duration_ms: 0.114524
+          ...
+        # Subtest: should serialize known normals set to a string
+        ok 7 - should serialize known normals set to a string
+          ---
+          duration_ms: 0.114945
+          ...
+        # Subtest: should serialize known normals set to an object
+        ok 8 - should serialize known normals set to an object
+          ---
+          duration_ms: 0.118803
+          ...
+        # Subtest: should serialize known normals set to an array of strings as a space-separated list
+        ok 9 - should serialize known normals set to an array of strings as a space-separated list
+          ---
+          duration_ms: 0.177342
+          ...
+        # Subtest: should serialize known normals set to an array of numbers as a space-separated list
+        ok 10 - should serialize known normals set to an array of numbers as a space-separated list
+          ---
+          duration_ms: 0.1818
+          ...
+        # Subtest: should serialize known normals set to an array of booleans as a space-separated list
+        ok 11 - should serialize known normals set to an array of booleans as a space-separated list
+          ---
+          duration_ms: 0.122169
+          ...
+        1..11
+    ok 7 - should support known normals
+      ---
+      duration_ms: 2.445012
+      ...
+    # Subtest: should support data properties
+        # Subtest: should ignore data properties set to `false`
+        ok 1 - should ignore data properties set to `false`
+          ---
+          duration_ms: 0.19784
+          ...
+        # Subtest: should ignore NaN data properties
+        ok 2 - should ignore NaN data properties
+          ---
+          duration_ms: 0.173265
+          ...
+        # Subtest: should serialize data properties set to `0`
+        ok 3 - should serialize data properties set to `0`
+          ---
+          duration_ms: 0.136225
+          ...
+        # Subtest: should serialize data properties set to `true` as without value
+        ok 4 - should serialize data properties set to `true` as without value
+          ---
+          duration_ms: 0.124503
+          ...
+        # Subtest: should serialize data properties set to an empty string
+        ok 5 - should serialize data properties set to an empty string
+          ---
+          duration_ms: 0.117229
+          ...
+        # Subtest: should serialize data properties set to their property name
+        ok 6 - should serialize data properties set to their property name
+          ---
+          duration_ms: 0.123972
+          ...
+        # Subtest: should serialize data properties set to their attribute name
+        ok 7 - should serialize data properties set to their attribute name
+          ---
+          duration_ms: 0.127128
+          ...
+        # Subtest: should serialize data properties set to a string
+        ok 8 - should serialize data properties set to a string
+          ---
+          duration_ms: 0.122239
+          ...
+        # Subtest: should serialize numeric-first data properties set to a string
+        ok 9 - should serialize numeric-first data properties set to a string
+          ---
+          duration_ms: 0.136746
+          ...
+        # Subtest: should serialize data properties set to an object
+        ok 10 - should serialize data properties set to an object
+          ---
+          duration_ms: 0.210575
+          ...
+        # Subtest: should serialize data properties set to an array of strings as a space-separated list
+        ok 11 - should serialize data properties set to an array of strings as a space-separated list
+          ---
+          duration_ms: 0.12279
+          ...
+        # Subtest: should serialize data properties set to an array of numbers as a space-separated list
+        ok 12 - should serialize data properties set to an array of numbers as a space-separated list
+          ---
+          duration_ms: 0.123351
+          ...
+        # Subtest: should serialize data properties set to an array of booleans as a space-separated list
+        ok 13 - should serialize data properties set to an array of booleans as a space-separated list
+          ---
+          duration_ms: 0.124082
+          ...
+        1..13
+    ok 8 - should support data properties
+      ---
+      duration_ms: 2.970316
+      ...
+    # Subtest: should support `collapseEmptyAttributes`
+        # Subtest: should show empty string attributes
+        ok 1 - should show empty string attributes
+          ---
+          duration_ms: 0.119103
+          ...
+        # Subtest: should collapse empty string attributes in `collapseEmptyAttributes` mode
+        ok 2 - should collapse empty string attributes in `collapseEmptyAttributes` mode
+          ---
+          duration_ms: 0.164628
+          ...
+        1..2
+    ok 9 - should support `collapseEmptyAttributes`
+      ---
+      duration_ms: 0.49066
+      ...
+    # Subtest: should support `tightAttributes`
+        # Subtest: should serialize multiple properties
+        ok 1 - should serialize multiple properties
+          ---
+          duration_ms: 0.137337
+          ...
+        # Subtest: should serialize multiple properties tightly in `tightAttributes` mode
+        ok 2 - should serialize multiple properties tightly in `tightAttributes` mode
+          ---
+          duration_ms: 0.135725
+          ...
+        1..2
+    ok 10 - should support `tightAttributes`
+      ---
+      duration_ms: 0.477094
+      ...
+    # Subtest: should support `tightCommaSeparatedLists`
+        # Subtest: should serialize comma-separated attributes
+        ok 1 - should serialize comma-separated attributes
+          ---
+          duration_ms: 0.129051
+          ...
+        # Subtest: should serialize comma-separated attributes tighly in `tightCommaSeparatedLists` mode
+        ok 2 - should serialize comma-separated attributes tighly in `tightCommaSeparatedLists` mode
+          ---
+          duration_ms: 0.16048
+          ...
+        1..2
+    ok 11 - should support `tightCommaSeparatedLists`
+      ---
+      duration_ms: 0.488015
+      ...
+    # Subtest: should support `quote`
+        # Subtest: should quote attribute values with double quotes by default
+        ok 1 - should quote attribute values with double quotes by default
+          ---
+          duration_ms: 0.125044
+          ...
+        # Subtest: should quote attribute values with single quotes if `quote: '\\''`
+        ok 2 - should quote attribute values with single quotes if `quote: '\\''`
+          ---
+          duration_ms: 0.142828
+          ...
+        # Subtest: should quote attribute values with double quotes if `quote: '\\"'`
+        ok 3 - should quote attribute values with double quotes if `quote: '\\"'`
+          ---
+          duration_ms: 0.116048
+          ...
+        # Subtest: should quote attribute values with single quotes if `quote: '\\''` even if they occur in value
+        ok 4 - should quote attribute values with single quotes if `quote: '\\''` even if they occur in value
+          ---
+          duration_ms: 0.2295
+          ...
+        # Subtest: should quote attribute values with double quotes if `quote: '\\"'` even if they occur in value
+        ok 5 - should quote attribute values with double quotes if `quote: '\\"'` even if they occur in value
+          ---
+          duration_ms: 0.128441
+          ...
+        # Subtest: should throw on invalid quotes
+        ok 6 - should throw on invalid quotes
+          ---
+          duration_ms: 0.425477
+          ...
+        1..6
+    ok 12 - should support `quote`
+      ---
+      duration_ms: 1.634774
+      ...
+    # Subtest: should support `quoteSmart`
+        # Subtest: should quote attribute values with primary quotes by default
+        ok 1 - should quote attribute values with primary quotes by default
+          ---
+          duration_ms: 0.177713
+          ...
+        # Subtest: should quote attribute values with primary quotes if the alternative occurs
+        ok 2 - should quote attribute values with primary quotes if the alternative occurs
+          ---
+          duration_ms: 0.122069
+          ...
+        # Subtest: should quote attribute values with primary quotes if they occur less than the alternative
+        ok 3 - should quote attribute values with primary quotes if they occur less than the alternative
+          ---
+          duration_ms: 0.126046
+          ...
+        # Subtest: should quote attribute values with primary quotes if they occur as much as alternatives (\#1)
+        ok 4 - should quote attribute values with primary quotes if they occur as much as alternatives (\#1)
+          ---
+          duration_ms: 0.125505
+          ...
+        # Subtest: should quote attribute values with primary quotes if they occur as much as alternatives (\#1)
+        ok 5 - should quote attribute values with primary quotes if they occur as much as alternatives (\#1)
+          ---
+          duration_ms: 0.120886
+          ...
+        # Subtest: should quote attribute values with alternative quotes if the primary occurs
+        ok 6 - should quote attribute values with alternative quotes if the primary occurs
+          ---
+          duration_ms: 0.126968
+          ...
+        # Subtest: should quote attribute values with alternative quotes if they occur less than the primary
+        ok 7 - should quote attribute values with alternative quotes if they occur less than the primary
+          ---
+          duration_ms: 0.130494
+          ...
+        1..7
+    ok 13 - should support `quoteSmart`
+      ---
+      duration_ms: 1.510611
+      ...
+    # Subtest: should support `preferUnquoted`
+        # Subtest: should omit quotes in `preferUnquoted`
+        ok 1 - should omit quotes in `preferUnquoted`
+          ---
+          duration_ms: 0.157475
+          ...
+        # Subtest: should keep quotes in `preferUnquoted` and impossible
+        ok 2 - should keep quotes in `preferUnquoted` and impossible
+          ---
+          duration_ms: 0.120306
+          ...
+        # Subtest: should not add `=` when omitting quotes on empty values
+        ok 3 - should not add `=` when omitting quotes on empty values
+          ---
+          duration_ms: 0.160581
+          ...
+        1..3
+    ok 14 - should support `preferUnquoted`
+      ---
+      duration_ms: 0.696415
+      ...
+    # Subtest: should support entities in attributes
+        # Subtest: should encode entities in attribute names
+        ok 1 - should encode entities in attribute names
+          ---
+          duration_ms: 0.130645
+          ...
+        # Subtest: should encode entities in attribute values
+        ok 2 - should encode entities in attribute values
+          ---
+          duration_ms: 0.119514
+          ...
+        # Subtest: should not encode characters in attribute names which cause parse errors, but work, in `allowParseErrors` mode
+        ok 3 - should not encode characters in attribute names which cause parse errors, but work, in `allowParseErrors` mode
+          ---
+          duration_ms: 0.136566
+          ...
+        # Subtest: should not encode characters in attribute values which cause parse errors, but work, in `allowParseErrors` mode
+        ok 4 - should not encode characters in attribute values which cause parse errors, but work, in `allowParseErrors` mode
+          ---
+          duration_ms: 0.143278
+          ...
+        # Subtest: should not encode characters which cause XSS issues in older browsers, in `allowDangerousCharacters` mode
+        ok 5 - should not encode characters which cause XSS issues in older browsers, in `allowDangerousCharacters` mode
+          ---
+          duration_ms: 0.121688
+          ...
+        1..5
+    ok 15 - should support entities in attributes
+      ---
+      duration_ms: 1.048094
+      ...
+    1..15
+ok 2 - `element` attributes
+  ---
+  duration_ms: 36.385185
+  ...
+# Subtest: `comment`
+    # Subtest: should serialize `comment`s
+    ok 1 - should serialize `comment`s
+      ---
+      duration_ms: 0.187291
+      ...
+    # Subtest: should not encode `comment`s
+    ok 2 - should not encode `comment`s
+      ---
+      duration_ms: 0.149911
+      ...
+    # Subtest: should serialize bogus comments (`bogusComments`)
+    ok 3 - should serialize bogus comments (`bogusComments`)
+      ---
+      duration_ms: 0.137267
+      ...
+    # Subtest: should prevent breaking out of bogus comments (`bogusComments`)
+    ok 4 - should prevent breaking out of bogus comments (`bogusComments`)
+      ---
+      duration_ms: 0.126186
+      ...
+    # Subtest: should prevent `>a` (security)
+    ok 5 - should prevent `>a` (security)
+      ---
+      duration_ms: 0.15515
+      ...
+    # Subtest: should prevent `->a` (security)
+    ok 6 - should prevent `->a` (security)
+      ---
+      duration_ms: 0.082785
+      ...
+    # Subtest: should prevent `a<!--b` (security)
+    ok 7 - should prevent `a<!--b` (security)
+      ---
+      duration_ms: 0.077044
+      ...
+    # Subtest: should prevent `a-->b` (security)
+    ok 8 - should prevent `a-->b` (security)
+      ---
+      duration_ms: 0.073908
+      ...
+    # Subtest: should prevent `a--!>b` (security)
+    ok 9 - should prevent `a--!>b` (security)
+      ---
+      duration_ms: 0.091011
+      ...
+    # Subtest: should prevent `a<!-` (security)
+    ok 10 - should prevent `a<!-` (security)
+      ---
+      duration_ms: 0.155061
+      ...
+    # Subtest: should allow `a>` (security)
+    ok 11 - should allow `a>` (security)
+      ---
+      duration_ms: 0.077235
+      ...
+    # Subtest: should allow `a->` (security)
+    ok 12 - should allow `a->` (security)
+      ---
+      duration_ms: 0.068638
+      ...
+    # Subtest: should allow `a<!-b` (security)
+    ok 13 - should allow `a<!-b` (security)
+      ---
+      duration_ms: 0.06403
+      ...
+    1..13
+ok 3 - `comment`
+  ---
+  duration_ms: 3.289815
+  ...
+# Subtest: toHtml()
+    # Subtest: should expose the public api
+    ok 1 - should expose the public api
+      ---
+      duration_ms: 0.469981
+      ...
+    # Subtest: should throw on non-nodes
+    ok 2 - should throw on non-nodes
+      ---
+      duration_ms: 0.144981
+      ...
+    # Subtest: should throw on unknown nodes
+    ok 3 - should throw on unknown nodes
+      ---
+      duration_ms: 0.140353
+      ...
+    # Subtest: should support a node
+    ok 4 - should support a node
+      ---
+      duration_ms: 0.13848
+      ...
+    # Subtest: should support an array
+    ok 5 - should support an array
+      ---
+      duration_ms: 0.164338
+      ...
+    1..5
+ok 4 - toHtml()
+  ---
+  duration_ms: 1.445989
+  ...
+# Subtest: `doctype`
+    # Subtest: should serialize doctypes
+    ok 1 - should serialize doctypes
+      ---
+      duration_ms: 0.118983
+      ...
+    # Subtest: should serialize doctypes tightly in `tightDoctype` mode
+    ok 2 - should serialize doctypes tightly in `tightDoctype` mode
+      ---
+      duration_ms: 0.109014
+      ...
+    # Subtest: should serialize uppercase doctypes in `upperDoctype` mode
+    ok 3 - should serialize uppercase doctypes in `upperDoctype` mode
+      ---
+      duration_ms: 0.104346
+      ...
+    1..3
+ok 5 - `doctype`
+  ---
+  duration_ms: 0.593622
+  ...
+# Subtest: `element`
+    # Subtest: should serialize `element`s
+    ok 1 - should serialize `element`s
+      ---
+      duration_ms: 0.195947
+      ...
+    # Subtest: should serialize unknown `element`s
+    ok 2 - should serialize unknown `element`s
+      ---
+      duration_ms: 0.110327
+      ...
+    # Subtest: should serialize void `element`s
+    ok 3 - should serialize void `element`s
+      ---
+      duration_ms: 0.108333
+      ...
+    # Subtest: should serialize given void `element`s
+    ok 4 - should serialize given void `element`s
+      ---
+      duration_ms: 0.131016
+      ...
+    # Subtest: should serialize with ` /` in `closeSelfClosing` mode
+    ok 5 - should serialize with ` /` in `closeSelfClosing` mode
+      ---
+      duration_ms: 0.120105
+      ...
+    # Subtest: should serialize voids with `/` in `closeSelfClosing` and `tightSelfClosing` mode
+    ok 6 - should serialize voids with `/` in `closeSelfClosing` and `tightSelfClosing` mode
+      ---
+      duration_ms: 0.124133
+      ...
+    # Subtest: should serialize voids with `/` in `closeSelfClosing` and `tightSelfClosing` mode, w/ space after an unquoted attribute (1)
+    ok 7 - should serialize voids with `/` in `closeSelfClosing` and `tightSelfClosing` mode, w/ space after an unquoted attribute (1)
+      ---
+      duration_ms: 0.176661
+      ...
+    # Subtest: should serialize voids with `/` in `closeSelfClosing` and `tightSelfClosing` mode, w/ space after an unquoted attribute (2)
+    ok 8 - should serialize voids with `/` in `closeSelfClosing` and `tightSelfClosing` mode, w/ space after an unquoted attribute (2)
+      ---
+      duration_ms: 0.152185
+      ...
+    # Subtest: should serialize voids with a ` /` in if an unquoted attribute ends with `/`
+    ok 9 - should serialize voids with a ` /` in if an unquoted attribute ends with `/`
+      ---
+      duration_ms: 0.132438
+      ...
+    # Subtest: should support `<template>`s content
+    ok 10 - should support `<template>`s content
+      ---
+      duration_ms: 0.233418
+      ...
+    1..10
+ok 6 - `element`
+  ---
+  duration_ms: 2.145971
+  ...
+# Subtest: `omitOptionalTags` mode
+    # Subtest: should omit opening and closing tags
+    ok 1 - should omit opening and closing tags
+      ---
+      duration_ms: 0.409487
+      ...
+    # Subtest: should not omit opening tags with attributes
+    ok 2 - should not omit opening tags with attributes
+      ---
+      duration_ms: 0.139711
+      ...
+    # Subtest: should ignore whitespace when determining whether tags can be omitted (\#1)
+    ok 3 - should ignore whitespace when determining whether tags can be omitted (\#1)
+      ---
+      duration_ms: 0.178364
+      ...
+    # Subtest: should ignore whitespace when determining whether tags can be omitted (\#2)
+    ok 4 - should ignore whitespace when determining whether tags can be omitted (\#2)
+      ---
+      duration_ms: 0.216315
+      ...
+    1..4
+ok 7 - `omitOptionalTags` mode
+  ---
+  duration_ms: 1.270621
+  ...
+# Subtest: `body` (opening)
+    # Subtest: should omit tag without children
+    ok 1 - should omit tag without children
+      ---
+      duration_ms: 0.128832
+      ...
+    # Subtest: should not omit tag if the head is a `comment`
+    ok 2 - should not omit tag if the head is a `comment`
+      ---
+      duration_ms: 0.126427
+      ...
+    # Subtest: should not omit tag if the head starts with whitespace
+    ok 3 - should not omit tag if the head starts with whitespace
+      ---
+      duration_ms: 0.12281
+      ...
+    # Subtest: should not omit tag if head is `meta`
+    ok 4 - should not omit tag if head is `meta`
+      ---
+      duration_ms: 0.127439
+      ...
+    # Subtest: should not omit tag if head is `link`
+    ok 5 - should not omit tag if head is `link`
+      ---
+      duration_ms: 0.128281
+      ...
+    # Subtest: should not omit tag if head is `script`
+    ok 6 - should not omit tag if head is `script`
+      ---
+      duration_ms: 0.117961
+      ...
+    # Subtest: should not omit tag if head is `style`
+    ok 7 - should not omit tag if head is `style`
+      ---
+      duration_ms: 0.12322
+      ...
+    # Subtest: should not omit tag if head is `template`
+    ok 8 - should not omit tag if head is `template`
+      ---
+      duration_ms: 0.132829
+      ...
+    # Subtest: should omit tag if head is something else
+    ok 9 - should omit tag if head is something else
+      ---
+      duration_ms: 0.118482
+      ...
+    1..9
+ok 8 - `body` (opening)
+  ---
+  duration_ms: 1.765929
+  ...
+# Subtest: `colgroup` (opening)
+    # Subtest: should not omit tag without children
+    ok 1 - should not omit tag without children
+      ---
+      duration_ms: 0.169919
+      ...
+    # Subtest: should omit tag with `col` child
+    ok 2 - should omit tag with `col` child
+      ---
+      duration_ms: 0.115406
+      ...
+    # Subtest: should omit tag without following
+    ok 3 - should omit tag without following
+      ---
+      duration_ms: 0.11713
+      ...
+    # Subtest: should not omit tag followed by `comment`
+    ok 4 - should not omit tag followed by `comment`
+      ---
+      duration_ms: 0.131136
+      ...
+    # Subtest: should not omit tag followed by whitespace
+    ok 5 - should not omit tag followed by whitespace
+      ---
+      duration_ms: 0.1385
+      ...
+    # Subtest: should omit tag followed by others
+    ok 6 - should omit tag followed by others
+      ---
+      duration_ms: 0.12794
+      ...
+    1..6
+ok 9 - `colgroup` (opening)
+  ---
+  duration_ms: 1.305697
+  ...
+# Subtest: `head` (opening)
+    # Subtest: should omit tag with children
+    ok 1 - should omit tag with children
+      ---
+      duration_ms: 0.173806
+      ...
+    # Subtest: should omit tag without children (could be fine in `srcdoc`)
+    ok 2 - should omit tag without children (could be fine in `srcdoc`)
+      ---
+      duration_ms: 0.111509
+      ...
+    # Subtest: should omit tag with `title`
+    ok 3 - should omit tag with `title`
+      ---
+      duration_ms: 0.243577
+      ...
+    # Subtest: should omit tag with `base`
+    ok 4 - should omit tag with `base`
+      ---
+      duration_ms: 0.126747
+      ...
+    # Subtest: should not omit tag with multiple `title`s
+    ok 5 - should not omit tag with multiple `title`s
+      ---
+      duration_ms: 0.164799
+      ...
+    # Subtest: should not omit tag with multiple `base`s
+    ok 6 - should not omit tag with multiple `base`s
+      ---
+      duration_ms: 0.176921
+      ...
+    1..6
+ok 10 - `head` (opening)
+  ---
+  duration_ms: 1.45721
+  ...
+# Subtest: `html` (opening)
+    # Subtest: should omit tag without first child
+    ok 1 - should omit tag without first child
+      ---
+      duration_ms: 0.159569
+      ...
+    # Subtest: should not omit tag if head is `comment`
+    ok 2 - should not omit tag if head is `comment`
+      ---
+      duration_ms: 0.334928
+      ...
+    # Subtest: should omit tag if head is not `comment`
+    ok 3 - should omit tag if head is not `comment`
+      ---
+      duration_ms: 0.136145
+      ...
+    1..3
+ok 11 - `html` (opening)
+  ---
+  duration_ms: 0.942405
+  ...
+# Subtest: `tbody` (opening)
+    # Subtest: should not omit tag without children
+    ok 1 - should not omit tag without children
+      ---
+      duration_ms: 0.228147
+      ...
+    # Subtest: should omit tag if head is `tr`
+    ok 2 - should omit tag if head is `tr`
+      ---
+      duration_ms: 0.137227
+      ...
+    # Subtest: should not omit tag preceded by an omitted `thead` closing tag
+    ok 3 - should not omit tag preceded by an omitted `thead` closing tag
+      ---
+      duration_ms: 0.21865
+      ...
+    # Subtest: should not omit tag preceded by an omitted `tbody` closing tag
+    ok 4 - should not omit tag preceded by an omitted `tbody` closing tag
+      ---
+      duration_ms: 0.161703
+      ...
+    1..4
+ok 12 - `tbody` (opening)
+  ---
+  duration_ms: 1.112885
+  ...
+# Subtest: `body` (closing)
+    # Subtest: should omit tag without following
+    ok 1 - should omit tag without following
+      ---
+      duration_ms: 0.165801
+      ...
+    # Subtest: should not omit tag if followed by `comment`
+    ok 2 - should not omit tag if followed by `comment`
+      ---
+      duration_ms: 0.142697
+      ...
+    # Subtest: should omit tag if not followed by `comment`
+    ok 3 - should omit tag if not followed by `comment`
+      ---
+      duration_ms: 0.142077
+      ...
+    1..3
+ok 13 - `body` (closing)
+  ---
+  duration_ms: 0.812712
+  ...
+# Subtest: `caption` (closing)
+    # Subtest: should not omit tag without children
+    ok 1 - should not omit tag without children
+      ---
+      duration_ms: 0.126116
+      ...
+    # Subtest: should omit tag without following
+    ok 2 - should omit tag without following
+      ---
+      duration_ms: 0.150943
+      ...
+    # Subtest: should not omit tag followed by `comment`
+    ok 3 - should not omit tag followed by `comment`
+      ---
+      duration_ms: 0.125265
+      ...
+    # Subtest: should not omit tag followed by whitespace
+    ok 4 - should not omit tag followed by whitespace
+      ---
+      duration_ms: 0.132368
+      ...
+    # Subtest: should omit tag followed by others
+    ok 5 - should omit tag followed by others
+      ---
+      duration_ms: 0.127038
+      ...
+    1..5
+ok 14 - `caption` (closing)
+  ---
+  duration_ms: 1.070726
+  ...
+# Subtest: `colgroup` (closing)
+    # Subtest: should not omit tag without children
+    ok 1 - should not omit tag without children
+      ---
+      duration_ms: 0.152074
+      ...
+    # Subtest: should omit tag if head is `col`
+    ok 2 - should omit tag if head is `col`
+      ---
+      duration_ms: 0.150613
+      ...
+    # Subtest: should not omit tag if head is not `col`
+    ok 3 - should not omit tag if head is not `col`
+      ---
+      duration_ms: 0.130414
+      ...
+    # Subtest: should not omit tag if previous is `colgroup` whose closing tag is omitted
+    ok 4 - should not omit tag if previous is `colgroup` whose closing tag is omitted
+      ---
+      duration_ms: 0.164258
+      ...
+    1..4
+ok 15 - `colgroup` (closing)
+  ---
+  duration_ms: 0.952435
+  ...
+# Subtest: `dd` (closing)
+    # Subtest: should omit tag without parent
+    ok 1 - should omit tag without parent
+      ---
+      duration_ms: 0.12291
+      ...
+    # Subtest: should omit tag without following
+    ok 2 - should omit tag without following
+      ---
+      duration_ms: 0.129492
+      ...
+    # Subtest: should omit tag followed by `dd`
+    ok 3 - should omit tag followed by `dd`
+      ---
+      duration_ms: 0.130875
+      ...
+    # Subtest: should omit tag followed by `dt`
+    ok 4 - should omit tag followed by `dt`
+      ---
+      duration_ms: 0.149551
+      ...
+    # Subtest: should not omit tag followed by others
+    ok 5 - should not omit tag followed by others
+      ---
+      duration_ms: 0.128842
+      ...
+    1..5
+ok 16 - `dd` (closing)
+  ---
+  duration_ms: 1.190581
+  ...
+# Subtest: `dt` (closing)
+    # Subtest: should not omit tag without parent
+    ok 1 - should not omit tag without parent
+      ---
+      duration_ms: 0.125656
+      ...
+    # Subtest: should not omit tag without following
+    ok 2 - should not omit tag without following
+      ---
+      duration_ms: 0.117931
+      ...
+    # Subtest: should omit tag followed by `dt`
+    ok 3 - should omit tag followed by `dt`
+      ---
+      duration_ms: 0.123491
+      ...
+    # Subtest: should omit tag followed by `dd`
+    ok 4 - should omit tag followed by `dd`
+      ---
+      duration_ms: 0.17582
+      ...
+    # Subtest: should not omit tag followed by others
+    ok 5 - should not omit tag followed by others
+      ---
+      duration_ms: 0.1491
+      ...
+    1..5
+ok 17 - `dt` (closing)
+  ---
+  duration_ms: 1.137772
+  ...
+# Subtest: `head` (closing)
+    # Subtest: should omit tag without following
+    ok 1 - should omit tag without following
+      ---
+      duration_ms: 0.124282
+      ...
+    # Subtest: should not omit tag if followed by `comment`
+    ok 2 - should not omit tag if followed by `comment`
+      ---
+      duration_ms: 0.129152
+      ...
+    # Subtest: should not omit tag if the next sibling starts with whitespace
+    ok 3 - should not omit tag if the next sibling starts with whitespace
+      ---
+      duration_ms: 0.128992
+      ...
+    # Subtest: should omit tag if not followed by `comment`
+    ok 4 - should omit tag if not followed by `comment`
+      ---
+      duration_ms: 0.12819
+      ...
+    1..4
+ok 18 - `head` (closing)
+  ---
+  duration_ms: 0.857477
+  ...
+# Subtest: `html` (closing)
+    # Subtest: should omit tag without following
+    ok 1 - should omit tag without following
+      ---
+      duration_ms: 0.215844
+      ...
+    # Subtest: should not omit tag if followed by `comment`
+    ok 2 - should not omit tag if followed by `comment`
+      ---
+      duration_ms: 0.127479
+      ...
+    # Subtest: should omit tag if not followed by `comment`
+    ok 3 - should omit tag if not followed by `comment`
+      ---
+      duration_ms: 0.119023
+      ...
+    1..3
+ok 19 - `html` (closing)
+  ---
+  duration_ms: 0.796542
+  ...
+# Subtest: `li` (closing)
+    # Subtest: should omit tag without parent
+    ok 1 - should omit tag without parent
+      ---
+      duration_ms: 0.146735
+      ...
+    # Subtest: should omit tag without following
+    ok 2 - should omit tag without following
+      ---
+      duration_ms: 0.129002
+      ...
+    # Subtest: should omit tag followed by `li`
+    ok 3 - should omit tag followed by `li`
+      ---
+      duration_ms: 0.120566
+      ...
+    # Subtest: should not omit tag followed by others
+    ok 4 - should not omit tag followed by others
+      ---
+      duration_ms: 0.118953
+      ...
+    1..4
+ok 20 - `li` (closing)
+  ---
+  duration_ms: 0.854622
+  ...
+# Subtest: `menuitem` (closing)
+    # Subtest: should omit tag without parent
+    ok 1 - should omit tag without parent
+      ---
+      duration_ms: 0.122389
+      ...
+    # Subtest: should omit tag without following
+    ok 2 - should omit tag without following
+      ---
+      duration_ms: 0.152445
+      ...
+    # Subtest: should omit tag followed by `menuitem`
+    ok 3 - should omit tag followed by `menuitem`
+      ---
+      duration_ms: 0.118673
+      ...
+    # Subtest: should omit tag followed by `hr`
+    ok 4 - should omit tag followed by `hr`
+      ---
+      duration_ms: 0.120576
+      ...
+    # Subtest: should omit tag followed by `menu`
+    ok 5 - should omit tag followed by `menu`
+      ---
+      duration_ms: 0.121538
+      ...
+    # Subtest: should not omit tag followed by others
+    ok 6 - should not omit tag followed by others
+      ---
+      duration_ms: 0.122009
+      ...
+    # Subtest: should omit tag when without children
+    ok 7 - should omit tag when without children
+      ---
+      duration_ms: 0.150142
+      ...
+    1..7
+ok 21 - `menuitem` (closing)
+  ---
+  duration_ms: 1.453363
+  ...
+# Subtest: `optgroup` (closing)
+    # Subtest: should omit tag without parent
+    ok 1 - should omit tag without parent
+      ---
+      duration_ms: 0.121448
+      ...
+    # Subtest: should omit tag without following
+    ok 2 - should omit tag without following
+      ---
+      duration_ms: 0.114525
+      ...
+    # Subtest: should omit tag followed by `optgroup`
+    ok 3 - should omit tag followed by `optgroup`
+      ---
+      duration_ms: 0.124273
+      ...
+    # Subtest: should not omit tag followed by others
+    ok 4 - should not omit tag followed by others
+      ---
+      duration_ms: 0.124934
+      ...
+    1..4
+ok 22 - `optgroup` (closing)
+  ---
+  duration_ms: 0.81656
+  ...
+# Subtest: `option` (closing)
+    # Subtest: should omit tag without parent
+    ok 1 - should omit tag without parent
+      ---
+      duration_ms: 0.121948
+      ...
+    # Subtest: should omit tag without following
+    ok 2 - should omit tag without following
+      ---
+      duration_ms: 0.114795
+      ...
+    # Subtest: should omit tag followed by `option`
+    ok 3 - should omit tag followed by `option`
+      ---
+      duration_ms: 0.121278
+      ...
+    # Subtest: should omit tag followed by `optgroup`
+    ok 4 - should omit tag followed by `optgroup`
+      ---
+      duration_ms: 0.147596
+      ...
+    # Subtest: should not omit tag followed by others
+    ok 5 - should not omit tag followed by others
+      ---
+      duration_ms: 0.158016
+      ...
+    1..5
+ok 23 - `option` (closing)
+  ---
+  duration_ms: 1.107976
+  ...
+# Subtest: `p` (closing)
+    # Subtest: should omit tag without following
+    ok 1 - should omit tag without following
+      ---
+      duration_ms: 0.128961
+      ...
+    # Subtest: should omit tag if followed by `address`
+    ok 2 - should omit tag if followed by `address`
+      ---
+      duration_ms: 0.125665
+      ...
+    # Subtest: should omit tag if followed by `ul`
+    ok 3 - should omit tag if followed by `ul`
+      ---
+      duration_ms: 0.12282
+      ...
+    # Subtest: should not omit tag if followed by `a`
+    ok 4 - should not omit tag if followed by `a`
+      ---
+      duration_ms: 0.139491
+      ...
+    # Subtest: should not omit tag if followed by `xmp`
+    ok 5 - should not omit tag if followed by `xmp`
+      ---
+      duration_ms: 0.124924
+      ...
+    # Subtest: should omit tag without parent
+    ok 6 - should omit tag without parent
+      ---
+      duration_ms: 0.104245
+      ...
+    # Subtest: should not omit tag if parent is `a`
+    ok 7 - should not omit tag if parent is `a`
+      ---
+      duration_ms: 0.115526
+      ...
+    # Subtest: should not omit tag if parented by `video`
+    ok 8 - should not omit tag if parented by `video`
+      ---
+      duration_ms: 0.122158
+      ...
+    # Subtest: should not omit tag if parent is `article`
+    ok 9 - should not omit tag if parent is `article`
+      ---
+      duration_ms: 0.116088
+      ...
+    # Subtest: should not omit tag if parented by `section`
+    ok 10 - should not omit tag if parented by `section`
+      ---
+      duration_ms: 0.149189
+      ...
+    1..10
+ok 24 - `p` (closing)
+  ---
+  duration_ms: 2.002472
+  ...
+# Subtest: `rp` (closing)
+    # Subtest: should omit tag without parent
+    ok 1 - should omit tag without parent
+      ---
+      duration_ms: 0.13367
+      ...
+    # Subtest: should omit tag without following
+    ok 2 - should omit tag without following
+      ---
+      duration_ms: 0.119574
+      ...
+    # Subtest: should omit tag followed by `rp`
+    ok 3 - should omit tag followed by `rp`
+      ---
+      duration_ms: 0.123632
+      ...
+    # Subtest: should omit tag followed by `rt`
+    ok 4 - should omit tag followed by `rt`
+      ---
+      duration_ms: 0.121127
+      ...
+    # Subtest: should not omit tag followed by others
+    ok 5 - should not omit tag followed by others
+      ---
+      duration_ms: 0.144461
+      ...
+    1..5
+ok 25 - `rp` (closing)
+  ---
+  duration_ms: 1.113967
+  ...
+# Subtest: `rt` (closing)
+    # Subtest: should omit tag without parent
+    ok 1 - should omit tag without parent
+      ---
+      duration_ms: 1.097486
+      ...
+    # Subtest: should omit tag without following
+    ok 2 - should omit tag without following
+      ---
+      duration_ms: 0.080261
+      ...
+    # Subtest: should omit tag followed by `rt`
+    ok 3 - should omit tag followed by `rt`
+      ---
+      duration_ms: 0.07457
+      ...
+    # Subtest: should omit tag followed by `rp`
+    ok 4 - should omit tag followed by `rp`
+      ---
+      duration_ms: 0.071845
+      ...
+    # Subtest: should not omit tag followed by others
+    ok 5 - should not omit tag followed by others
+      ---
+      duration_ms: 0.078356
+      ...
+    1..5
+ok 26 - `rt` (closing)
+  ---
+  duration_ms: 1.78262
+  ...
+# Subtest: `tbody` (closing)
+    # Subtest: should omit tag without siblings
+    ok 1 - should omit tag without siblings
+      ---
+      duration_ms: 0.117481
+      ...
+    # Subtest: should omit tag without following
+    ok 2 - should omit tag without following
+      ---
+      duration_ms: 0.10632
+      ...
+    # Subtest: should omit tag followed by `tbody`
+    ok 3 - should omit tag followed by `tbody`
+      ---
+      duration_ms: 0.113723
+      ...
+    # Subtest: should omit tag followed by `tfoot`
+    ok 4 - should omit tag followed by `tfoot`
+      ---
+      duration_ms: 0.115837
+      ...
+    # Subtest: should not omit tag followed by others
+    ok 5 - should not omit tag followed by others
+      ---
+      duration_ms: 0.108463
+      ...
+    1..5
+ok 27 - `tbody` (closing)
+  ---
+  duration_ms: 0.914503
+  ...
+# Subtest: `td` (closing)
+    # Subtest: should omit tag without parent
+    ok 1 - should omit tag without parent
+      ---
+      duration_ms: 0.116379
+      ...
+    # Subtest: should omit tag without following
+    ok 2 - should omit tag without following
+      ---
+      duration_ms: 0.104826
+      ...
+    # Subtest: should omit tag followed by `td`
+    ok 3 - should omit tag followed by `td`
+      ---
+      duration_ms: 0.108524
+      ...
+    # Subtest: should omit tag followed by `th`
+    ok 4 - should omit tag followed by `th`
+      ---
+      duration_ms: 0.115006
+      ...
+    # Subtest: should not omit tag followed by others
+    ok 5 - should not omit tag followed by others
+      ---
+      duration_ms: 0.110467
+      ...
+    1..5
+ok 28 - `td` (closing)
+  ---
+  duration_ms: 0.910886
+  ...
+# Subtest: `th` (closing)
+    # Subtest: should omit tag without parent
+    ok 1 - should omit tag without parent
+      ---
+      duration_ms: 0.074359
+      ...
+    # Subtest: should omit tag without following
+    ok 2 - should omit tag without following
+      ---
+      duration_ms: 0.072826
+      ...
+    # Subtest: should omit tag followed by `th`
+    ok 3 - should omit tag followed by `th`
+      ---
+      duration_ms: 0.066896
+      ...
+    # Subtest: should omit tag followed by `td`
+    ok 4 - should omit tag followed by `td`
+      ---
+      duration_ms: 0.148238
+      ...
+    # Subtest: should not omit tag followed by others
+    ok 5 - should not omit tag followed by others
+      ---
+      duration_ms: 0.072126
+      ...
+    1..5
+ok 29 - `th` (closing)
+  ---
+  duration_ms: 0.736881
+  ...
+# Subtest: `tfoot` (closing)
+    # Subtest: should omit tag without siblings
+    ok 1 - should omit tag without siblings
+      ---
+      duration_ms: 0.111569
+      ...
+    # Subtest: should omit tag without following
+    ok 2 - should omit tag without following
+      ---
+      duration_ms: 0.142187
+      ...
+    # Subtest: should not omit tag followed by others
+    ok 3 - should not omit tag followed by others
+      ---
+      duration_ms: 0.110858
+      ...
+    1..3
+ok 30 - `tfoot` (closing)
+  ---
+  duration_ms: 0.595907
+  ...
+# Subtest: `thead` (closing)
+    # Subtest: should not omit tag without siblings
+    ok 1 - should not omit tag without siblings
+      ---
+      duration_ms: 0.104996
+      ...
+    # Subtest: should not omit tag without following
+    ok 2 - should not omit tag without following
+      ---
+      duration_ms: 0.102643
+      ...
+    # Subtest: should omit tag followed by `tbody`
+    ok 3 - should omit tag followed by `tbody`
+      ---
+      duration_ms: 0.115095
+      ...
+    # Subtest: should omit tag followed by `tfoot`
+    ok 4 - should omit tag followed by `tfoot`
+      ---
+      duration_ms: 0.106389
+      ...
+    # Subtest: should not omit tag followed by others
+    ok 5 - should not omit tag followed by others
+      ---
+      duration_ms: 0.109626
+      ...
+    1..5
+ok 31 - `thead` (closing)
+  ---
+  duration_ms: 0.902912
+  ...
+# Subtest: `tr` (closing)
+    # Subtest: should omit tag without siblings
+    ok 1 - should omit tag without siblings
+      ---
+      duration_ms: 0.1015
+      ...
+    # Subtest: should omit tag without following
+    ok 2 - should omit tag without following
+      ---
+      duration_ms: 0.101781
+      ...
+    # Subtest: should not omit tag followed by others
+    ok 3 - should not omit tag followed by others
+      ---
+      duration_ms: 0.115637
+      ...
+    1..3
+ok 32 - `tr` (closing)
+  ---
+  duration_ms: 0.537638
+  ...
+# Subtest: `raw`
+    # Subtest: should encode `raw`s
+    ok 1 - should encode `raw`s
+      ---
+      duration_ms: 0.119083
+      ...
+    # Subtest: should not encode `raw`s in `allowDangerousHtml` mode
+    ok 2 - should not encode `raw`s in `allowDangerousHtml` mode
+      ---
+      duration_ms: 0.103674
+      ...
+    1..2
+ok 33 - `raw`
+  ---
+  duration_ms: 0.422401
+  ...
+# Subtest: security
+    # Subtest: should make sure comments cannot break out of their context (safe)
+    ok 1 - should make sure comments cannot break out of their context (safe)
+      ---
+      duration_ms: 0.12298
+      ...
+    # Subtest: should make sure scripts render (unsafe)
+    ok 2 - should make sure scripts render (unsafe)
+      ---
+      duration_ms: 0.105017
+      ...
+    # Subtest: should make sure event attributes render (unsafe)
+    ok 3 - should make sure event attributes render (unsafe)
+      ---
+      duration_ms: 0.134032
+      ...
+    # Subtest: should make sure texts are encoded (safe)
+    ok 4 - should make sure texts are encoded (safe)
+      ---
+      duration_ms: 0.11256
+      ...
+    1..4
+ok 34 - security
+  ---
+  duration_ms: 0.75788
+  ...
+# Subtest: svg
+    # Subtest: should serialize `element`s
+    ok 1 - should serialize `element`s
+      ---
+      duration_ms: 0.12256
+      ...
+    # Subtest: should serialize unknown `element`s
+    ok 2 - should serialize unknown `element`s
+      ---
+      duration_ms: 0.09597
+      ...
+    # Subtest: should serialize `element`s with content
+    ok 3 - should serialize `element`s with content
+      ---
+      duration_ms: 0.098925
+      ...
+    # Subtest: should serialize with ` /` in `closeEmptyElements` mode
+    ok 4 - should serialize with ` /` in `closeEmptyElements` mode
+      ---
+      duration_ms: 0.108033
+      ...
+    # Subtest: should serialize empties with `/` in `closeEmptyElements` and `tightSelfClosing` mode
+    ok 5 - should serialize empties with `/` in `closeEmptyElements` and `tightSelfClosing` mode
+      ---
+      duration_ms: 0.104365
+      ...
+    # Subtest: should serialize empties with `/` in `closeEmptyElements` and `tightSelfClosing` mode, *with* a space after an unquoted attribute
+    ok 6 - should serialize empties with `/` in `closeEmptyElements` and `tightSelfClosing` mode, *with* a space after an unquoted attribute
+      ---
+      duration_ms: 0.210905
+      ...
+    # Subtest: should serialize properties
+    ok 7 - should serialize properties
+      ---
+      duration_ms: 0.377227
+      ...
+    # Subtest: should serialize special properties
+    ok 8 - should serialize special properties
+      ---
+      duration_ms: 0.154228
+      ...
+    # Subtest: should collapse empty string attributes in `collapseEmptyAttributes` mode
+    ok 9 - should collapse empty string attributes in `collapseEmptyAttributes` mode
+      ---
+      duration_ms: 0.164478
+      ...
+    # Subtest: should serialize multiple properties
+    ok 10 - should serialize multiple properties
+      ---
+      duration_ms: 0.145794
+      ...
+    # Subtest: should serialize multiple properties tightly in `tightAttributes` mode
+    ok 11 - should serialize multiple properties tightly in `tightAttributes` mode
+      ---
+      duration_ms: 0.147417
+      ...
+    # Subtest: should serialize space-separated attributes
+    ok 12 - should serialize space-separated attributes
+      ---
+      duration_ms: 0.139381
+      ...
+    # Subtest: should serialize comma-separated attributes
+    ok 13 - should serialize comma-separated attributes
+      ---
+      duration_ms: 0.201999
+      ...
+    # Subtest: should serialize comma-separated attributes tighly in `tightCommaSeparatedLists` mode
+    ok 14 - should serialize comma-separated attributes tighly in `tightCommaSeparatedLists` mode
+      ---
+      duration_ms: 0.179517
+      ...
+    # Subtest: should serialize unknown lists as space-separated
+    ok 15 - should serialize unknown lists as space-separated
+      ---
+      duration_ms: 0.196097
+      ...
+    # Subtest: should serialize known boolean attributes set to `true`
+    ok 16 - should serialize known boolean attributes set to `true`
+      ---
+      duration_ms: 0.127359
+      ...
+    # Subtest: should ignore known boolean attributes set to `false`
+    ok 17 - should ignore known boolean attributes set to `false`
+      ---
+      duration_ms: 0.12288
+      ...
+    # Subtest: should serialize truthy known boolean attributes
+    ok 18 - should serialize truthy known boolean attributes
+      ---
+      duration_ms: 0.125985
+      ...
+    # Subtest: should ignore falsey known boolean attributes
+    ok 19 - should ignore falsey known boolean attributes
+      ---
+      duration_ms: 0.12297
+      ...
+    # Subtest: should ignore unknown attributes set to `false`
+    ok 20 - should ignore unknown attributes set to `false`
+      ---
+      duration_ms: 0.121147
+      ...
+    # Subtest: should serialize unknown attributes set to `true`
+    ok 21 - should serialize unknown attributes set to `true`
+      ---
+      duration_ms: 0.154759
+      ...
+    # Subtest: should serialize positive known numeric attributes
+    ok 22 - should serialize positive known numeric attributes
+      ---
+      duration_ms: 0.151434
+      ...
+    # Subtest: should serialize negative known numeric attributes
+    ok 23 - should serialize negative known numeric attributes
+      ---
+      duration_ms: 0.133891
+      ...
+    # Subtest: should serialize known numeric attributes set to `0`
+    ok 24 - should serialize known numeric attributes set to `0`
+      ---
+      duration_ms: 0.1277
+      ...
+    # Subtest: should ignore known numeric attributes set to `NaN`
+    ok 25 - should ignore known numeric attributes set to `NaN`
+      ---
+      duration_ms: 0.124774
+      ...
+    # Subtest: should serialize known numeric attributes set to non-numeric values
+    ok 26 - should serialize known numeric attributes set to non-numeric values
+      ---
+      duration_ms: 0.143799
+      ...
+    # Subtest: should serialize other attributes
+    ok 27 - should serialize other attributes
+      ---
+      duration_ms: 0.13367
+      ...
+    # Subtest: should serialize other falsey attributes
+    ok 28 - should serialize other falsey attributes
+      ---
+      duration_ms: 0.121698
+      ...
+    # Subtest: should serialize other non-string attributes
+    ok 29 - should serialize other non-string attributes
+      ---
+      duration_ms: 0.158518
+      ...
+    # Subtest: should quote attribute values with single quotes if `quote: "'"`
+    ok 30 - should quote attribute values with single quotes if `quote: "'"`
+      ---
+      duration_ms: 0.132167
+      ...
+    # Subtest: should quote attribute values with double quotes if `quote: '"'`
+    ok 31 - should quote attribute values with double quotes if `quote: '"'`
+      ---
+      duration_ms: 0.118833
+      ...
+    # Subtest: should quote smartly if the other quote is less prominent (\#1)
+    ok 32 - should quote smartly if the other quote is less prominent (\#1)
+      ---
+      duration_ms: 0.136235
+      ...
+    # Subtest: should quote smartly if the other quote is less prominent (\#2)
+    ok 33 - should quote smartly if the other quote is less prominent (\#2)
+      ---
+      duration_ms: 0.125785
+      ...
+    # Subtest: should omit quotes in `preferUnquoted`
+    ok 34 - should omit quotes in `preferUnquoted`
+      ---
+      duration_ms: 0.160842
+      ...
+    # Subtest: should encode entities in attribute names
+    ok 35 - should encode entities in attribute names
+      ---
+      duration_ms: 0.141205
+      ...
+    # Subtest: should encode entities in attribute values
+    ok 36 - should encode entities in attribute values
+      ---
+      duration_ms: 0.147135
+      ...
+    # Subtest: should encode characters in attribute names which cause parse errors, work, even though `allowParseErrors` mode is on
+    ok 37 - should encode characters in attribute names which cause parse errors, work, even though `allowParseErrors` mode is on
+      ---
+      duration_ms: 0.142798
+      ...
+    # Subtest: should encode characters in attribute values which cause parse errors, work, even though `allowParseErrors` mode is on
+    ok 38 - should encode characters in attribute values which cause parse errors, work, even though `allowParseErrors` mode is on
+      ---
+      duration_ms: 0.120065
+      ...
+    # Subtest: should not encode characters which cause XSS issues in older browsers, in `allowDangerousCharacters` mode
+    ok 39 - should not encode characters which cause XSS issues in older browsers, in `allowDangerousCharacters` mode
+      ---
+      duration_ms: 0.157766
+      ...
+    # Subtest: should ignore attributes set to `null`
+    ok 40 - should ignore attributes set to `null`
+      ---
+      duration_ms: 0.113562
+      ...
+    # Subtest: should ignore attributes set to `undefined`
+    ok 41 - should ignore attributes set to `undefined`
+      ---
+      duration_ms: 0.110767
+      ...
+    # Subtest: should serialize an SVG tree
+    ok 42 - should serialize an SVG tree
+      ---
+      duration_ms: 0.222547
+      ...
+    # Subtest: should serialize SVG props on an `svg` element in HTML
+    ok 43 - should serialize SVG props on an `svg` element in HTML
+      ---
+      duration_ms: 0.193522
+      ...
+    # Subtest: should serialize an HTML tree with embedded HTML
+    ok 44 - should serialize an HTML tree with embedded HTML
+      ---
+      duration_ms: 0.200506
+      ...
+    1..44
+ok 35 - svg
+  ---
+  duration_ms: 9.344498
+  ...
+# Subtest: `root`
+    # Subtest: should serialize `root`s
+    ok 1 - should serialize `root`s
+      ---
+      duration_ms: 0.13877
+      ...
+    # Subtest: should serialize `root`s w/o children
+    ok 2 - should serialize `root`s w/o children
+      ---
+      duration_ms: 0.104085
+      ...
+    1..2
+ok 36 - `root`
+  ---
+  duration_ms: 0.450704
+  ...
+# Subtest: `text`
+    # Subtest: should serialize `text`s
+    ok 1 - should serialize `text`s
+      ---
+      duration_ms: 0.138851
+      ...
+    # Subtest: should encode `text`s
+    ok 2 - should encode `text`s
+      ---
+      duration_ms: 0.110326
+      ...
+    # Subtest: should not encode `text`s in `style`
+    ok 3 - should not encode `text`s in `style`
+      ---
+      duration_ms: 0.116078
+      ...
+    # Subtest: should not encode `text`s in `script`
+    ok 4 - should not encode `text`s in `script`
+      ---
+      duration_ms: 0.111649
+      ...
+    # Subtest: should encode `text`s in other nodes
+    ok 5 - should encode `text`s in other nodes
+      ---
+      duration_ms: 0.121587
+      ...
+    1..5
+ok 37 - `text`
+  ---
+  duration_ms: 1.040319
+  ...
+# Subtest: three independently targeted builds have current artifact and config hashes
+ok 38 - three independently targeted builds have current artifact and config hashes
+  ---
+  duration_ms: 4.021895
+  ...
+# Subtest: public comparison describes current versus original and distinguishes build stages
+ok 39 - public comparison describes current versus original and distinguishes build stages
+  ---
+  duration_ms: 0.530474
+  ...
+# Subtest: built Pages artifact contains the current data and measured downloads
+ok 40 - built Pages artifact contains the current data and measured downloads
+  ---
+  duration_ms: 0.747942
+  ...
+# Subtest: @itslil/hast-util-to-html library
+    # Subtest: exports toHtml
+    ok 1 - exports toHtml
+      ---
+      duration_ms: 2.106287
+      ...
+    # Subtest: keeps pinned option and tree keys in the library artifact
+    ok 2 - keeps pinned option and tree keys in the library artifact
+      ---
+      duration_ms: 0.487303
+      ...
+    # Subtest: serializes a hast fixture to html
+    ok 3 - serializes a hast fixture to html
+      ---
+      duration_ms: 0.604372
+      ...
+    # Subtest: escapes text and attributes
+    ok 4 - escapes text and attributes
+      ---
+      duration_ms: 2.277718
+      ...
+    # Subtest: joins className and emits boolean and void markup
+    ok 5 - joins className and emits boolean and void markup
+      ---
+      duration_ms: 0.313858
+      ...
+    # Subtest: emits raw only when allowDangerousHtml is set
+    ok 6 - emits raw only when allowDangerousHtml is set
+      ---
+      duration_ms: 0.221575
+      ...
+    1..6
+ok 41 - @itslil/hast-util-to-html library
+  ---
+  duration_ms: 7.461992
+  type: 'suite'
+  ...
+# Subtest: @itslil/hast-util-to-html closed lane
+    # Subtest: exists and still serializes a tree
+    ok 1 - exists and still serializes a tree
+      ---
+      duration_ms: 9.153852
+      ...
+    1..1
+ok 42 - @itslil/hast-util-to-html closed lane
+  ---
+  duration_ms: 9.35613
+  type: 'suite'
+  ...
+1..42
+# tests 458
+# suites 3
+# pass 458
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 554.509779
