@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 3,
+  "name": "hast-util-to-htmllil",
+  "measuredAt": "2026-10-01T16:34:15.744Z",
+  "status": "verified",
+  "buildPassed": true,
+  "compiler": {
+    "commit": "ff5c2f6d9237bc5cd1555594a579bb324d1ef605",
+    "sha256": "d83d88ba32b1bf942dc636708386b6d2683619d4248ef06e2cbd9beed77b6276",
+    "profile": "release",
+    "dirty": false
+  },
+  "sourceCommit": "167105bec6d9756591d210442aee53594224730d",
+  "comparisonScope": "hast-util-to-html@9.0.5 public runtime graph, Node-compatible conditions; original and LilScript keep the same external dependencies (none). Original graph assembled with esbuild 0.28.1; minified separately with Terser 5.51.2 (three passes), Oxc (mangle on/off), and esbuild. Browser DOM-decoder diagnostics, when present, are excluded from the Node comparison baseline. Raw, gzip-9 and Brotli-11 are measured with the same canonical codec. The LilScript lane is the delivered package artifact.",
+  "tests": {
+    "pass": 456,
+    "total": 456,
+    "status": 0
+  },
+  "publicationSourceFingerprint": "6d421dc9bff4cc5991c535b689f02aeedca5a9739b0c9bb6f2aa1fe9b549a913",
+  "publicationArtifacts": [
+    {
+      "path": "dist/to-html.cjs",
+      "sha256": "c05b1cba96968225b1933ba1c4120331cd36f4d4703078cf8f2ddba47c25432a"
+    },
+    {
+      "path": "dist/to-html.closed.js",
+      "sha256": "f8ab071b06c7832aae02afaa8d60e7154dedaba667b84f8aa08090c8360d508f"
+    },
+    {
+      "path": "dist/to-html.esm.js",
+      "sha256": "db8a5df958dccf2aee763cdbcbec20d735a73dcb6b6d248fdb12a85bf0f937cd"
+    },
+    {
+      "path": "dist/to-html.umd.js",
+      "sha256": "49905161cd81dcac073a709f1c09d3363e3b95c41862df170f0e775a3dfc38e0"
+    }
+  ],
+  "comparisonArtifacts": [
+    {
+      "path": "site/esm-comparison/lilscript.js",
+      "sha256": "db8a5df958dccf2aee763cdbcbec20d735a73dcb6b6d248fdb12a85bf0f937cd"
+    },
+    {
+      "path": "site/esm-comparison/original.js",
+      "sha256": "2f8453e73dd7b8b773053bd39eeb82ee22b0137631825ab0f463622f75fde00d"
+    }
+  ],
+  "codecSha256": "d8e53f62ab4b253cb884f2cb7c99ee38348983c9d81b241708f26d0ed20adf95",
+  "checks": [
+    {
+      "name": "build-site",
+      "command": [
+        "npm",
+        "run",
+        "build:site"
+      ],
+      "status": 0,
+      "seconds": 0.14360179999493994
+    },
+    {
+      "name": "check-pack",
+      "command": [
+        "npm",
+        "run",
+        "check:pack"
+      ],
+      "status": 0,
+      "seconds": 0.49147134899976663
+    },
+    {
+      "name": "check-site",
+      "command": [
+        "npm",
+        "run",
+        "check:site"
+      ],
+      "status": 0,
+      "seconds": 0.3402972900075838
+    },
+    {
+      "name": "page-browser",
+      "status": 0,
+      "seconds": 1.8683861369790975
+    }
+  ]
+}

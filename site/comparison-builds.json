@@ -1,0 +1,392 @@
+{
+  "compiler": {
+    "baseRevision": "f7d29bd9",
+    "binarySha256": "8ff44fabb92c949e68240ce6541038fd52e2f3c04d1a9ac470031e4238541c3a",
+    "hasLocalSourceChanges": true
+  },
+  "machine": {
+    "cpu": "AMD EPYC 7763 64-Core Processor",
+    "logicalCpus": 8,
+    "memoryGiB": 15.6,
+    "os": "Linux-7.0.0-1014-azure-x86_64-with-glibc2.39",
+    "node": "v20.19.0"
+  },
+  "lilscript": [
+    {
+      "library": "hast-util-to-htmllil",
+      "objective": "raw",
+      "command": [
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/bin/lilscript",
+        "--config",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/configs/hast-util-to-htmllil-raw.toml",
+        "--target",
+        "js-module",
+        "--mode",
+        "production",
+        "--jobs",
+        "1",
+        "--out-dir",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/artifacts/hast-util-to-htmllil/raw",
+        "--explain",
+        "json",
+        "--cache",
+        "off",
+        "--logical-work",
+        "2000000000"
+      ],
+      "wallSeconds": 14.340898262998962,
+      "returncode": 0,
+      "compilerSha256": "8ff44fabb92c949e68240ce6541038fd52e2f3c04d1a9ac470031e4238541c3a",
+      "configSha256": "70720000086e1ba481c77cb8ae05aa51444e17c3a33df4cb27e01717e738b742",
+      "measuredAt": "2026-10-02T22:41:16.369926+00:00",
+      "outputSha256": "2e8670faab051703d9f7e1dfe94ae1644ea9ed6dac5f5ddb40f63a8fbd7c866e",
+      "raw": 28483
+    },
+    {
+      "library": "hast-util-to-htmllil",
+      "objective": "gzip",
+      "command": [
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/bin/lilscript",
+        "--config",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/configs/hast-util-to-htmllil-gzip.toml",
+        "--target",
+        "js-module",
+        "--mode",
+        "production",
+        "--jobs",
+        "1",
+        "--out-dir",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/artifacts/hast-util-to-htmllil/gzip",
+        "--explain",
+        "json",
+        "--cache",
+        "off",
+        "--logical-work",
+        "2000000000"
+      ],
+      "wallSeconds": 12.537916223998764,
+      "returncode": 0,
+      "compilerSha256": "8ff44fabb92c949e68240ce6541038fd52e2f3c04d1a9ac470031e4238541c3a",
+      "configSha256": "98a82510d2208c09d32b14ab72b649ac43da673688891e73cd4858865394a94c",
+      "measuredAt": "2026-10-02T22:41:28.913369+00:00",
+      "outputSha256": "7861f27e16751b12badc122c259c007c8ecaf62deee85d32e9fa2ffa7083defb",
+      "raw": 29071
+    },
+    {
+      "library": "hast-util-to-htmllil",
+      "objective": "brotli",
+      "command": [
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/bin/lilscript",
+        "--config",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/configs/hast-util-to-htmllil-brotli.toml",
+        "--target",
+        "js-module",
+        "--mode",
+        "production",
+        "--jobs",
+        "1",
+        "--out-dir",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/artifacts/hast-util-to-htmllil/brotli",
+        "--explain",
+        "json",
+        "--cache",
+        "off",
+        "--logical-work",
+        "2000000000"
+      ],
+      "wallSeconds": 52.00934511300147,
+      "returncode": 0,
+      "compilerSha256": "8ff44fabb92c949e68240ce6541038fd52e2f3c04d1a9ac470031e4238541c3a",
+      "configSha256": "b957a4b59f4ba14fadb428175fa192111113bf4ea02d067b06ef41137db49d7c",
+      "measuredAt": "2026-10-02T22:42:20.927542+00:00",
+      "outputSha256": "385f2ec1ec828880a4646588ba06b10377d1473c1a72ae534cfcb1e66920a568",
+      "raw": 29062
+    }
+  ],
+  "upstream": {
+    "name": "hast-util-to-htmllil",
+    "package": "hast-util-to-html",
+    "version": "9.0.5",
+    "resolveDir": "/home/azureuser/hast-util-to-htmllil",
+    "output": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/hast-util-to-htmllil",
+    "entry": "export {toHtml} from \"hast-util-to-html\";",
+    "external": [],
+    "sharedExports": [
+      "toHtml"
+    ],
+    "excludedExports": [],
+    "additionalExports": [],
+    "resolution": {
+      "platform": "neutral",
+      "conditions": [
+        "production"
+      ],
+      "mainFields": [
+        "module",
+        "main"
+      ],
+      "target": "es2020",
+      "defines": {
+        "process.env.NODE_ENV": "production"
+      }
+    },
+    "minifiers": [
+      {
+        "tool": "Terser",
+        "version": "5.51.2",
+        "esbuild": "0.28.1",
+        "artifact": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/hast-util-to-htmllil/terser.mjs",
+        "sha256": "2f8453e73dd7b8b773053bd39eeb82ee22b0137631825ab0f463622f75fde00d",
+        "raw": 31835,
+        "imports": [],
+        "wallSeconds": 0.43759797900000014,
+        "command": [
+          "/home/azureuser/.nvm/versions/node/v20.19.0/bin/node",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream.mjs",
+          "child",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/hast-util-to-htmllil/job.json",
+          "Terser"
+        ]
+      },
+      {
+        "tool": "esbuild",
+        "version": "0.28.1",
+        "esbuild": "0.28.1",
+        "artifact": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/hast-util-to-htmllil/esbuild.mjs",
+        "sha256": "5e4cd7ddeafe4ea53d5a32a6bfa9bc74a398730bc412df5750c4693f802cdf3b",
+        "raw": 32747,
+        "imports": [],
+        "wallSeconds": 0.06875263300000006,
+        "command": [
+          "/home/azureuser/.nvm/versions/node/v20.19.0/bin/node",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream.mjs",
+          "child",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/hast-util-to-htmllil/job.json",
+          "esbuild"
+        ]
+      },
+      {
+        "tool": "Oxc",
+        "version": "via Vite 8.2.1",
+        "esbuild": "0.28.1",
+        "artifact": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/hast-util-to-htmllil/oxc.mjs",
+        "sha256": "da5023625032c214c8a3e0ff058cb8403de02fdcc9581e64afb88dc88a84de74",
+        "raw": 31627,
+        "imports": [],
+        "wallSeconds": 0.18287516800000048,
+        "command": [
+          "/home/azureuser/.nvm/versions/node/v20.19.0/bin/node",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream.mjs",
+          "child",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/hast-util-to-htmllil/job.json",
+          "Oxc"
+        ]
+      }
+    ]
+  },
+  "sourceInputs": {
+    "root": 0,
+    "entries": [
+      {
+        "name": "index",
+        "module": 0
+      }
+    ],
+    "modules": [
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/index.lil",
+        "bytes": 164,
+        "sha256": "0fa477ec92851ed6e58e8a4cdfdefc64a0d326748ed2542487c47b5bd2fa45d8",
+        "dependencies": [
+          1
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/lib/index.lil",
+        "bytes": 2486,
+        "sha256": "26c55ae933415e3b0e0b1a3c677c1680224c6e9833ccab40460468e8f9248856",
+        "dependencies": [
+          2,
+          5
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/lib/handle/index.lil",
+        "bytes": 1257,
+        "sha256": "f8b1a787209af8672c29f01185dd99e6c575e4d4a2abc3a0479bb2b8aef1fb87",
+        "dependencies": [
+          3,
+          6,
+          7,
+          14,
+          16,
+          15,
+          5
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/lib/handle/comment.lil",
+        "bytes": 499,
+        "sha256": "4c1b705c415968848cd5d2e0c9e1a2403e81e75b19e6213c8b70a67320fb8079",
+        "dependencies": [
+          4,
+          5
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/lib/entities.lil",
+        "bytes": 5781,
+        "sha256": "da241d65eb99b3d8116c6ca6372d4708b633d93127e77897f8ec39e5e53eb886",
+        "dependencies": [
+          5
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/lib/types.lil",
+        "bytes": 6348,
+        "sha256": "00ef68aa24de78cca81260ca6c375673129e228f40763718bd0fdf2a946b857d",
+        "dependencies": [],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/lib/handle/doctype.lil",
+        "bytes": 339,
+        "sha256": "a18bff27907fecde3ffd44c6c1adbd2a6513e8e9f0356444aa6c7acc5547f501",
+        "dependencies": [
+          5
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/lib/handle/element.lil",
+        "bytes": 6032,
+        "sha256": "f3abf6c3c4bcbeead650d23b02a5e5b6b1b5ba7f5afe0c5848811ad00ddb1c9c",
+        "dependencies": [
+          1,
+          4,
+          8,
+          10,
+          13,
+          5
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/lib/schema.lil",
+        "bytes": 3621,
+        "sha256": "0df18e11024aafb9f6bc52eb6b35403299745fd8be29eed15865a0ea5ac67ce3",
+        "dependencies": [
+          9,
+          5
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/lib/schema-data.lil",
+        "bytes": 18501,
+        "sha256": "d8af02546e95f0422caa52f0905cb9fb4fe8bb5138c62ba29f1a16e1536f7ec3",
+        "dependencies": [],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/lib/omission/closing.lil",
+        "bytes": 4116,
+        "sha256": "3f6e927f30745ed944c537b23214544f6a4e8be90faed591cde4f23b9fbfcd70",
+        "dependencies": [
+          11,
+          12,
+          5
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/lib/omission/omission.lil",
+        "bytes": 513,
+        "sha256": "349a475265c135b94e6612b27bee5350c45518162fe86c84ae2555cd738de90f",
+        "dependencies": [],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/lib/omission/util/siblings.lil",
+        "bytes": 932,
+        "sha256": "f66f24cfed228c58d234253ded8ac3266d36ab866028083cbff806c1cdaa50fe",
+        "dependencies": [
+          5
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/lib/omission/opening.lil",
+        "bytes": 3550,
+        "sha256": "b0554c4639e81d743effc460c4e5b5504b96864cd493d583704452e8393be7da",
+        "dependencies": [
+          10,
+          11,
+          12,
+          5
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/lib/handle/raw.lil",
+        "bytes": 294,
+        "sha256": "68d551152ba36a178112cbf1f397b3e85243377611b6e35e35cd010de9bdc14f",
+        "dependencies": [
+          15,
+          5
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/lib/handle/text.lil",
+        "bytes": 567,
+        "sha256": "3aaabda981f5c88d0d107f90b76f0f314baf7f5320593049019b04c1ff41b100",
+        "dependencies": [
+          4,
+          5
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/hast-util-to-htmllil/src/lib/handle/root.lil",
+        "bytes": 181,
+        "sha256": "b2ec07dec13d0892da360201fb7ab15d868c6ffcdf9653cbe28e290da3cc9847",
+        "dependencies": [
+          1,
+          5
+        ],
+        "dynamic_dependencies": []
+      }
+    ],
+    "host_modules": [],
+    "host_reserved": []
+  },
+  "validation": {
+    "checks": 1143,
+    "objectives": [
+      {
+        "objective": "raw",
+        "checks": 381,
+        "suite": "upstream-derived/API"
+      },
+      {
+        "objective": "gzip",
+        "checks": 381,
+        "suite": "upstream-derived/API"
+      },
+      {
+        "objective": "brotli",
+        "checks": 381,
+        "suite": "upstream-derived/API"
+      }
+    ],
+    "scope": "Main ESM entry; selected corpora and API checks, not all package formats or complete upstream equivalence."
+  },
+  "workLimit": 2000000000,
+  "timingScope": "One sequential fresh-output build per objective/minifier. Upstream timing is ESM bundling and minification, not original-repository source compilation."
+}
